@@ -19,7 +19,7 @@ public class ManagerController {
     }
     @PostMapping
     public Result save(@RequestBody Manager manager){
-        boolean flag = managerService.save(manager);
+        boolean flag = managerService.saveManager(manager);
         return new Result(flag , flag ? Code.SAVE_OK : Code.SAVE_ERR);
     }
 }
