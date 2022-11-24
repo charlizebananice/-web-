@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@RestController
-@Controller
+@RestController
 @RequestMapping("/manager")
 public class ManagerController {
     @Autowired
@@ -22,7 +21,9 @@ public class ManagerController {
 
     @PostMapping
     public Result save(@RequestBody Manager manager) {
+        System.out.println("进入controller"+manager.getId());
         boolean flag = managerService.saveManager(manager);
+        System.out.println("出去");
         return new Result(flag, flag ? Code.SAVE_OK : Code.SAVE_ERR);
     }
 
@@ -34,11 +35,11 @@ public class ManagerController {
         return new Result(data, Code.GET_OK);
     }
 
-    /*@GetMapping("/{id}")
+    @GetMapping("/{id}")
     public Result getById(@PathVariable Integer id) {
         Manager data = managerService.getManagerById(id);
         return new Result(data, Code.GET_OK);
-    }*/
+    }
 
 
     @DeleteMapping("/{id}")

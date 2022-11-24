@@ -1,4 +1,4 @@
-DROP TABLE manager CASCADE;
+DROP TABLE tbl_manager CASCADE;
 
 CREATE TABLE tbl_manager(
 	managerID serial NOT NULL UNIQUE,

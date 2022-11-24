@@ -26,8 +26,23 @@ public interface ManagerService {
      * @return
      */
     public boolean updateManager(Manager manager);
+    /**
+     * 删除manager
+     * @param id
+     * @return
+     */
     public boolean deleteManager(Integer id);
+    /**
+     * 按id查找manager
+     * @param id
+     * @return manager
+     */
     public Manager getManagerById(Integer id);
+    /**
+     * 查找所有manager
+     * @param
+     * @return List<Manager>
+     */
     public List<Manager> getAllManager();
 
 }

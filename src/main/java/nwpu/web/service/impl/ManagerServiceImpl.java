@@ -14,6 +14,7 @@ public class ManagerServiceImpl implements ManagerService {
     @Autowired
     private ManagerDao managerDao;
     public boolean saveManager(Manager manager) {
+        System.out.println("进入service"+manager.getId());
         return managerDao.save(manager)>0;
     }
 

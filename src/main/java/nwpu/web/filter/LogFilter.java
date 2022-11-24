@@ -47,7 +47,7 @@ public class LogFilter implements Filter {
         requestUrl = httpServletRequest.getQueryString() == null ?requestUrl:(requestUrl+"?"+httpServletRequest.getQueryString());//所有的地址栏参数
         long endTime = System.currentTimeMillis();
         //记录过滤器访问路径及访问用时
-        logger.info(httpServletRequest.getRemoteAddr()+"访问了"+requestUrl+",=总用时"+(endTime-startTime)+"毫秒。");
+        logger.info(httpServletRequest.getRemoteAddr()+"访问了"+requestUrl+",总用时="+(endTime-startTime)+"毫秒。");
         // 插入记录信息（格式化日志信息）
         // 记录debug级别的信息
         /*logger.debug("调试信息.");
