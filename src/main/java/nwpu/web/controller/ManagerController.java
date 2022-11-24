@@ -22,4 +22,29 @@ public class ManagerController {
         boolean flag = managerService.saveManager(manager);
         return new Result(flag , flag ? Code.SAVE_OK : Code.SAVE_ERR);
     }
+
+    @GetMapping
+    public Result getAll(){
+        List<Manager> data = managerService.getAllManager();
+        return new Result(data,Code.GET_OK);
+    }
+
+    @GetMapping("/{id}")
+    public Result getById(@PathVariable Integer id){
+        Manager data = managerService.getManagerById(id);
+        return new Result(data,Code.GET_OK);
+    }
+
+
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Integer id){
+        boolean flag = managerService.deleteManager(id);
+        return new Result(flag , flag?Code.DELETE_OK : Code.DELETE_ERR);
+    }
+
+    @PutMapping
+    public  Result update(@RequestBody Manager manager){
+        boolean flag = managerService.updateManager(manager);
+        return new Result(flag , flag ? Code.UPDATE_OK : Code.UPDATE_ERR);
+    }
 }
