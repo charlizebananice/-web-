@@ -10,14 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="web环境搭建">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/filter/LogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/servlet/Log4JInitServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/testController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/TestDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/TestService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -54,26 +59,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/17274/ideaProject/springmvc_11_page&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15039062&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.31990793&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;6e35b4d059e54d648fbcdc025b20b11a&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Users/17274/ideaProject/Intra-cityDistributionManagementSystem/src/main/webapp/WEB-INF",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15039062",
+    "project.structure.side.proportion": "0.31990793",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "spring.configuration.checksum": "6e35b4d059e54d648fbcdc025b20b11a"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF\views" />
+      <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="nwpu.web.exception" />
       <recent name="nwpu.web.controller" />
@@ -84,13 +99,15 @@
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="运行单个请求">
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests中的所有" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 8.5.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.82" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Intra_cityDistributionManagementSystem/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Intra-cityDistributionManagementSystem:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Intra_cityDistributionManagementSystem_war" />
+            <option name="CONTEXT_PATH" value="/Intra_cityDistributionManagementSystem" />
           </settings>
         </artifact>
       </deployment>
@@ -173,11 +190,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP 请求.generated-requests中的所有" />
       <item itemvalue="HTTP 请求.generated-requests | #3" />
       <item itemvalue="Tomcat 服务器.Tomcat 8.5.82" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP 请求.generated-requests中的所有" />
         <item itemvalue="HTTP 请求.generated-requests | #3" />
       </list>
     </recent_temporary>
@@ -203,7 +222,17 @@
       <workItem from="1669036859221" duration="2702000" />
       <workItem from="1669045604013" duration="1454000" />
       <workItem from="1669085885193" duration="32000" />
-      <workItem from="1669104762348" duration="518000" />
+      <workItem from="1669104762348" duration="850000" />
+      <workItem from="1669116884555" duration="56000" />
+      <workItem from="1669122389844" duration="61000" />
+      <workItem from="1669127423468" duration="505000" />
+      <workItem from="1669172783933" duration="177000" />
+      <workItem from="1669202430227" duration="4352000" />
+      <workItem from="1669209169990" duration="2915000" />
+      <workItem from="1669258506467" duration="2471000" />
+      <workItem from="1669260994422" duration="3305000" />
+      <workItem from="1669267031527" duration="7050000" />
+      <workItem from="1669279098710" duration="5545000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -247,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669040214735</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="web环境搭建">
+      <created>1669105288024</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669105288024</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,19 +308,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringConfig.java</url>
           <line>14</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

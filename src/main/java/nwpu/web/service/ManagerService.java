@@ -6,9 +6,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Transactional
+//@Transactional
+/**
+ * 定义整个类为事务类，正常时提交，异常时回滚
+ */
+//事务注释有问题，先用@Service
 @Service
-//定义整个类为事务类，正常时提交，异常时回滚
 public interface ManagerService {
     /**
      * 新建一个管理员

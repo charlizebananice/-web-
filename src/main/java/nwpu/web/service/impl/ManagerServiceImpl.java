@@ -30,6 +30,7 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     public List<Manager> getAllManager() {
+        System.out.println("进入service");
         return managerDao.getAll();
     }
 }

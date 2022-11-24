@@ -4,4 +4,21 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <!--<servlet>
+    <servlet-name>Log4jServlet6</servlet-name>
+    <servlet-class>nwpu.web.servlet.Log4JInitServlet</servlet-class>
+  </servlet>-->
+  <servlet>
+    <servlet-name>Log4JInitServlet</servlet-name>
+    <servlet-class>nwpu.web.servlet.Log4JInitServlet</servlet-class>
+    <init-param>
+      <param-name>log4j-properties-location</param-name>
+      <param-value>/WEB-INF/log4j.properties</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Log4JInitServlet</servlet-name>
+    <url-pattern>/Log4JInitServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
