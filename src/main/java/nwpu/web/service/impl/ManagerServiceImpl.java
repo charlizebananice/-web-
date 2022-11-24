@@ -18,18 +18,18 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     public boolean updateManager(Manager manager) {
-        return false;
+        return managerDao.update(manager)>0;
     }
 
     public boolean deleteManager(Integer id) {
-        return false;
+        return managerDao.delete(id)>0;
     }
 
     public Manager getManagerById(Integer id) {
-        return null;
+        return managerDao.getById(id);
     }
 
     public List<Manager> getAllManager() {
-        return null;
+        return managerDao.getAll();
     }
 }
