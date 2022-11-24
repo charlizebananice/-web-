@@ -10,4 +10,17 @@ import org.springframework.stereotype.Repository;
 public interface ManagerDao {
     @Insert("insert into tbl_manager (managerName, password) values (#{managerName},#{password})")
     public int save(@Param("manager") Manager manager);
+
+    @Update("update tbl_manager set managerName=#{managerName},password=#{password}")
+    public int update(@Param("manager") Manager manager);
+
+    @Delete("delete from tbl_manager where managerId=#{id}")
+    public int delete(Integer id);
+
+    @Select("select * from tbl_manager where managerId = #{id}")
+    public Manager getById(Integer id);
+
+    @Select("select * from tbl_manager")
+    public List<Manager> getAll();
+
 }
