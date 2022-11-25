@@ -3,16 +3,26 @@ package nwpu.web.domain;
 import org.springframework.transaction.annotation.Transactional;
 
 public class Manager {
-    private Integer id;
+    private Integer managerId;
     private String managerName;
     private String password;
 
-    public Integer getId() {
-        return id;
+    public int getDeleteState() {
+        return deleteState;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setDeleteState(int deleteState) {
+        this.deleteState = deleteState;
+    }
+
+    private int deleteState;
+
+    public Integer getManagerId() {
+        return managerId;
+    }
+
+    public void setManagerId(Integer managerId) {
+        this.managerId = managerId;
     }
 
     public String getManagerName() {
@@ -34,9 +44,10 @@ public class Manager {
     @Override
     public String toString() {
         return "Manager{" +
-                "id=" + id +
+                "managerId=" + managerId +
                 ", managerName='" + managerName + '\'' +
                 ", password='" + password + '\'' +
+                ", deleteState=" + deleteState +
                 '}';
     }
 }

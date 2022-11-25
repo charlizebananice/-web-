@@ -21,7 +21,7 @@ public class ManagerController {
 
     @PostMapping
     public Result save(@RequestBody Manager manager) {
-        System.out.println("进入controller"+manager.getId());
+        System.out.println("进入controller"+manager);
         boolean flag = managerService.saveManager(manager);
         System.out.println("出去");
         return new Result(flag, flag ? Code.SAVE_OK : Code.SAVE_ERR);
@@ -41,15 +41,23 @@ public class ManagerController {
         return new Result(data, Code.GET_OK);
     }
 
+    @GetMapping("/name/{managerName}")
+    public Result getByName(@PathVariable String managerName) {
+        List<Manager> data = managerService.getManagerByManagerName(managerName);
+        return new Result(data, Code.GET_OK);
+    }
+
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
+        System.out.println("进入delete"+id);
         boolean flag = managerService.deleteManager(id);
         return new Result(flag, flag ? Code.DELETE_OK : Code.DELETE_ERR);
     }
 
     @PutMapping
     public Result update(@RequestBody Manager manager) {
+        System.out.println("进入controller"+manager);
         boolean flag = managerService.updateManager(manager);
         return new Result(flag, flag ? Code.UPDATE_OK : Code.UPDATE_ERR);
     }

@@ -39,6 +39,12 @@ public interface ManagerService {
      */
     public Manager getManagerById(Integer id);
     /**
+     * 按managerName查找manager
+     * @param managerName
+     * @return manager
+     */
+    public List<Manager> getManagerByManagerName(String managerName);
+    /**
      * 查找所有manager
      * @param
      * @return List<Manager>

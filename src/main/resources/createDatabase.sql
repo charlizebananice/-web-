@@ -1,30 +1,33 @@
 DROP TABLE tbl_manager CASCADE;
 
 CREATE TABLE tbl_manager(
-	managerID serial NOT NULL UNIQUE,
-	managerName VARCHAR(20) NOT NULL UNIQUE,
-	password VARCHAR(20) NOT NULL UNIQUE,
+	managerID serial,
+	managerName VARCHAR(20) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+    deleteState int NOT NULL default 0,
 	PRIMARY KEY(managerID)
 );
 DROP TABLE tbl_order CASCADE;
 
 CREATE TABLE tbl_order(
-	orderID serial NOT NULL UNIQUE,
+	orderID serial,
 	state INTEGER NOT NULL,
 	fee int NOT NULL,
+    deleteState int NOT NULL default 0,
 	shippingAddress VARCHAR(50) NOT NULL,
 	receiveAddress VARCHAR(50) NOT NULL,
-	managerID serial,
-	deliveryManID serial,
+	managerID INTEGER,
+	deliveryManID INTEGER,
 	PRIMARY KEY(orderID),
 	FOREIGN KEY (managerID) REFERENCES tbl_manager(managerID),
 	FOREIGN KEY (deliveryManID) REFERENCES tbl_deliveryMan(deliveryManID)
 );
 DROP TABLE tbl_deliveryMan CASCADE;
 CREATE TABLE tbl_deliveryMan(
-	deliveryManID serial NOT NULL UNIQUE,
-	deliveryManName VARCHAR(20) NOT NULL UNIQUE,
-	password VARCHAR(20) NOT NULL UNIQUE,
+	deliveryManID serial,
+	deliveryManName VARCHAR(20) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+    deleteState int NOT NULL default 0,
 	phoneNo CHAR(11) UNIQUE,
 	email VARCHAR(30) UNIQUE,
 	PRIMARY KEY(deliveryManID)

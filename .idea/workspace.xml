@@ -9,19 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="web环境搭建">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="第二次提交（save与update存在问题）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/filter/LogFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/filter/LogFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/createDatabase.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
@@ -72,7 +72,7 @@
     "project.structure.proportion": "0.15039062",
     "project.structure.side.proportion": "0.31990793",
     "settings.editor.selected.configurable": "inlay.hints",
-    "spring.configuration.checksum": "6e35b4d059e54d648fbcdc025b20b11a"
+    "spring.configuration.checksum": "326f3e98e3c91dc1f8fc5c6b309df2cf"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -230,6 +230,7 @@
       <workItem from="1669260994422" duration="3305000" />
       <workItem from="1669267031527" duration="7050000" />
       <workItem from="1669279098710" duration="5545000" />
+      <workItem from="1669362042730" duration="15448000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -280,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669105288024</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="第二次提交（save与update存在问题）">
+      <created>1669305453083</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669305453083</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="web环境搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="web环境搭建" />
+    <MESSAGE value="第二次提交（save与update存在问题）" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二次提交（save与update存在问题）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

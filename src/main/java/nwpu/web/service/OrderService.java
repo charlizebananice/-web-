@@ -57,4 +57,11 @@ public interface OrderService {
      * @return List<Order>
      */
     public List<Order> getAllOrderByAddress(String address);
+
+    /**
+     * 按deliverymanName查找所有order
+     * @param deliverymanName
+     * @return List<Order>
+     */
+    public List<Order> getAllOrderByName(String deliverymanName);
 }

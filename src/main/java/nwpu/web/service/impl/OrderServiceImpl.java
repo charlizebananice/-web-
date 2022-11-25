@@ -41,4 +41,8 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> getAllOrderByAddress(String address) {
         return orderDao.getByAddress(address);
     }
+
+    public List<Order> getAllOrderByName(String deliverymanName) {
+        return orderDao.getByName(deliverymanName);
+    }
 }

@@ -8,6 +8,16 @@ public class Order {
 
     private Integer fee;
 
+    public Integer getDeleteState() {
+        return deleteState;
+    }
+
+    public void setDeleteState(Integer deleteState) {
+        this.deleteState = deleteState;
+    }
+
+    private Integer deleteState;
+
     private String shippingAddress;
 
     private String receiveAddress;
@@ -78,6 +88,7 @@ public class Order {
                 "orderId=" + orderId +
                 ", state=" + state +
                 ", fee=" + fee +
+                ", deleteState=" + deleteState +
                 ", shippingAddress='" + shippingAddress + '\'' +
                 ", receiveAddress='" + receiveAddress + '\'' +
                 ", managerId=" + managerId +
