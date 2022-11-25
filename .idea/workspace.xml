@@ -9,19 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="web环境搭建">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/filter/LogFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/servlet/Log4JInitServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.properties" afterDir="false" />
+    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/Code.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/common/Code.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/common/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/entity/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,28 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Users/17274/ideaProject/Intra-cityDistributionManagementSystem/src/main/webapp/WEB-INF",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "工件",
-    "project.structure.proportion": "0.15039062",
-    "project.structure.side.proportion": "0.31990793",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "spring.configuration.checksum": "6e35b4d059e54d648fbcdc025b20b11a"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/17274/ideaProject/Intra-cityDistributionManagementSystem/src/main/webapp/WEB-INF&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15039062&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31990793&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;6e35b4d059e54d648fbcdc025b20b11a&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF" />
@@ -232,7 +229,11 @@
       <workItem from="1669258506467" duration="2471000" />
       <workItem from="1669260994422" duration="3305000" />
       <workItem from="1669267031527" duration="7050000" />
-      <workItem from="1669279098710" duration="5545000" />
+      <workItem from="1669279098710" duration="5712000" />
+      <workItem from="1669284993069" duration="311000" />
+      <workItem from="1669298396400" duration="78000" />
+      <workItem from="1669350578459" duration="69000" />
+      <workItem from="1669351674931" duration="711000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -283,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669105288024</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter">
+      <created>1669284883891</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669284883891</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +310,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="web环境搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="web环境搭建" />
+    <MESSAGE value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

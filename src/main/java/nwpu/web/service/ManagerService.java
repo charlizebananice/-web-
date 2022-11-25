@@ -1,8 +1,7 @@
 package nwpu.web.service;
 
-import nwpu.web.domain.Manager;
+import nwpu.web.domain.entity.Manager;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package nwpu.web.controller;
+package nwpu.web.domain.common;
 
 public class Result {
     //封装返回数据

@@ -1,4 +1,4 @@
-package nwpu.web.domain;
+package nwpu.web.domain.entity;
 
 import org.springframework.transaction.annotation.Transactional;
 

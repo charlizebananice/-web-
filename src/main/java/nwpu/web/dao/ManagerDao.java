@@ -1,6 +1,6 @@
 package nwpu.web.dao;
 
-import nwpu.web.domain.Manager;
+import nwpu.web.domain.entity.Manager;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.annotations.Param;
 
