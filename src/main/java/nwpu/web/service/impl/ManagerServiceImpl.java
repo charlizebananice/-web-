@@ -1,7 +1,7 @@
 package nwpu.web.service.impl;
 
 import nwpu.web.dao.ManagerDao;
-import nwpu.web.domain.Manager;
+import nwpu.web.domain.entity.Manager;
 import nwpu.web.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package nwpu.web.controller;
+package nwpu.web.domain.common;
 
 /**
  * 对manager操作定义的状态码

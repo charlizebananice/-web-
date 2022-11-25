@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="-web-:war" />
+      <artifact name="Intra-cityDistributionManagementSystem:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -11,13 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="第二次提交（save与update存在问题）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/Code.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/common/Code.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ProjectExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/common/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/ManagerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/dao/OrderDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/domain/entity/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/ManagerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/service/impl/ManagerServiceImpl.java" afterDir="false" />
@@ -231,6 +235,11 @@
       <workItem from="1669267031527" duration="7050000" />
       <workItem from="1669279098710" duration="5545000" />
       <workItem from="1669362042730" duration="15448000" />
+      <workItem from="1669279098710" duration="5712000" />
+      <workItem from="1669284993069" duration="311000" />
+      <workItem from="1669298396400" duration="78000" />
+      <workItem from="1669350578459" duration="69000" />
+      <workItem from="1669351674931" duration="711000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -289,6 +298,14 @@
       <updated>1669305453083</updated>
     </task>
     <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00008" summary="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter">
+      <created>1669284883891</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669284883891</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +326,8 @@
     <MESSAGE value="web环境搭建" />
     <MESSAGE value="第二次提交（save与update存在问题）" />
     <option name="LAST_COMMIT_MESSAGE" value="第二次提交（save与update存在问题）" />
+    <MESSAGE value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

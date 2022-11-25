@@ -1,6 +1,8 @@
 package nwpu.web.controller;
 
-import nwpu.web.domain.Manager;
+import nwpu.web.domain.common.Code;
+import nwpu.web.domain.common.Result;
+import nwpu.web.domain.entity.Manager;
 import nwpu.web.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

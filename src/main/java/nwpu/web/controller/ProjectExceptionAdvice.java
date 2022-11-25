@@ -1,6 +1,8 @@
 package nwpu.web.controller;
 
 
+import nwpu.web.domain.common.Code;
+import nwpu.web.domain.common.Result;
 import nwpu.web.exception.BusinessException;
 import nwpu.web.exception.SystemException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
