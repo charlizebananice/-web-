@@ -1,13 +1,9 @@
 package nwpu.web.dao;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
-import nwpu.web.domain.Order;
-import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import nwpu.web.domain.entity.Order;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.web.bind.annotation.GetMapping;
 
 
 import java.util.List;
@@ -24,6 +20,15 @@ public interface OrderDao {
 
     @Select("select * from tbl_order where deleteState = 0")
     public List<Order> getAll();
+
+    @Select("select * from tbl_order where deliverymanId = #{id} and deleteState = 0")
+    public List<Order> getAllDeliverymanOrder(@Param("id") Integer id);
+
+    @Select("select count(orderId) from tbl_order where deleteState = 0")
+    public int getAllOrderSum();
+
+    @Select("select count(orderId) from tbl_order where state  =#{state} and deleteState = 0")
+    public int getAllOrderSumByState(@Param("state") Integer state);
 
     @Select("select * from tbl_order where orderId = #{id} and deleteState = 0")
     public Order getById(@Param("id") Integer id);

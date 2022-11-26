@@ -1,10 +1,8 @@
 package nwpu.web.service;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-import nwpu.web.domain.Manager;
-import nwpu.web.domain.Order;
+import nwpu.web.domain.entity.Order;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 @Service
@@ -64,4 +62,25 @@ public interface OrderService {
      * @return List<Order>
      */
     public List<Order> getAllOrderByName(String deliverymanName);
+
+    /**
+     * 查找派送员的所有order
+     * @param deliverymanId
+     * @return List<Order>
+     */
+    public List<Order> getAllDeliverymanOrder(Integer deliverymanId);
+
+    /**
+     * 查找订单总数
+     * @param
+     * @return List<Order>
+     */
+    public int getAllOrderSum();
+
+    /**
+     * 查找各个状态的订单数
+     * @param state
+     * @return List<Order>
+     */
+    public int getAllOrderSumByState(Integer state);
 }

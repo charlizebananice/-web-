@@ -1,8 +1,7 @@
 package nwpu.web.service.impl;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 import nwpu.web.dao.OrderDao;
-import nwpu.web.domain.Order;
+import nwpu.web.domain.entity.Order;
 import nwpu.web.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,5 +43,17 @@ public class OrderServiceImpl implements OrderService {
 
     public List<Order> getAllOrderByName(String deliverymanName) {
         return orderDao.getByName(deliverymanName);
+    }
+
+    public List<Order> getAllDeliverymanOrder(Integer deliverymanId) {
+        return orderDao.getAllDeliverymanOrder(deliverymanId);
+    }
+
+    public int getAllOrderSum() {
+        return orderDao.getAllOrderSum();
+    }
+
+    public int getAllOrderSumByState(Integer state) {
+        return orderDao.getAllOrderSumByState(state);
     }
 }

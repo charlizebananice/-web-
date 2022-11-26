@@ -1,9 +1,10 @@
 package nwpu.web.controller;
 
-import nwpu.web.domain.Order;
+import nwpu.web.domain.common.Code;
+import nwpu.web.domain.entity.Order;
+import nwpu.web.domain.common.Result;
 import nwpu.web.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -66,4 +67,21 @@ public class OrderController {
         return new Result(data , Code.GET_OK);
     }
 
+    @GetMapping("/deliveryman/{deliverymanId}")
+    public Result getAllDeliverymanOrder(@PathVariable Integer deliverymanId){
+        List<Order> data = orderService.getAllDeliverymanOrder(deliverymanId);
+        return new Result(data , Code.GET_OK);
+    }
+
+    @GetMapping("/orderSum")
+    public Result getAllOrderSum(){
+        Integer data = orderService.getAllOrderSum();
+        return new Result(data, Code.GET_OK);
+    }
+
+    @GetMapping("/OrderSumByState/{state}")
+    public Result getAllOrderSumByState(@PathVariable Integer state){
+        Integer data = orderService.getAllOrderSumByState(state);
+        return new Result(data,Code.GET_OK);
+    }
 }
