@@ -9,33 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="调整了domain包">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/js/npm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/filter/LogFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/filter/LogFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-    </list>
+    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -263,7 +237,7 @@
       <workItem from="1669527962168" duration="2560000" />
       <workItem from="1669545013264" duration="2445000" />
       <workItem from="1669547470483" duration="230000" />
-      <workItem from="1669547709886" duration="8258000" />
+      <workItem from="1669547709886" duration="8558000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -321,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669284883891</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入">
+      <created>1669556081190</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669556081190</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +323,9 @@
     <MESSAGE value="web环境搭建" />
     <MESSAGE value="第二次提交（save与update存在问题）" />
     <MESSAGE value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
+    <MESSAGE value="调整了domain包" />
+    <MESSAGE value="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
