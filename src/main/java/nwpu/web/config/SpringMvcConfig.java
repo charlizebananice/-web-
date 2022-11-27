@@ -32,9 +32,9 @@ public class SpringMvcConfig implements WebMvcConfigurer {
      * 静态资源处理器，但是这个方法似乎和
      * @see SpringMvcSupport 等价
      */
-    /*public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer)
-    {
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
-    }*/
+    }
+
 
 }

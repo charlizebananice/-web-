@@ -60,6 +60,7 @@ public class LogFilter implements Filter {
         logger.trace("跟踪信息");
         logger.fatal("致命信息");*/
         System.out.println("拦截");
+
         filterChain.doFilter(servletRequest,servletResponse);
     }
 

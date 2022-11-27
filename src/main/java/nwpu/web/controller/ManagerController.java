@@ -29,13 +29,13 @@ public class ManagerController {
         return new Result(flag, flag ? Code.SAVE_OK : Code.SAVE_ERR);
     }
 
-    @GetMapping
+    /*@GetMapping
     public Result getAll() {
         System.out.println("进入");
         List<Manager> data = managerService.getAllManager();
         System.out.println("data为"+data);
         return new Result(data, Code.GET_OK);
-    }
+    }*/
 
     @GetMapping("/{id}")
     public Result getById(@PathVariable Integer id) {
@@ -64,9 +64,9 @@ public class ManagerController {
         return new Result(flag, flag ? Code.UPDATE_OK : Code.UPDATE_ERR);
     }
 
-    /*@RequestMapping
+    @RequestMapping
     public String test() {
         System.out.println("测试。。。");
         return "test";
-    }*/
+    }
 }

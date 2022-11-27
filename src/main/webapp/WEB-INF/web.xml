@@ -4,6 +4,7 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+<!--  <absolute-ordering/>-->
   <!--<servlet>
     <servlet-name>Log4jServlet6</servlet-name>
     <servlet-class>nwpu.web.servlet.Log4JInitServlet</servlet-class>
@@ -21,4 +22,6 @@
     <servlet-name>Log4JInitServlet</servlet-name>
     <url-pattern>/Log4JInitServlet</url-pattern>
   </servlet-mapping>
+
+
 </web-app>
