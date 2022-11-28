@@ -11,7 +11,7 @@ DROP TABLE tbl_order CASCADE;
 
 CREATE TABLE tbl_order(
 	orderID serial,
-	state INTEGER NOT NULL,
+	state INTEGER NOT NULL default 0,
 	fee int NOT NULL,
     deleteState int NOT NULL default 0,
 	shippingAddress VARCHAR(50) NOT NULL,

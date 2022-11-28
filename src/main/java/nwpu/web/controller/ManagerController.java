@@ -6,11 +6,13 @@ import nwpu.web.domain.entity.Manager;
 import nwpu.web.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/manager")
 public class ManagerController {
     @Autowired
@@ -29,19 +31,21 @@ public class ManagerController {
         return new Result(flag, flag ? Code.SAVE_OK : Code.SAVE_ERR);
     }
 
-    /*@GetMapping
-    public Result getAll() {
+    @RequestMapping(method = RequestMethod.GET)
+    public String getAll(HttpSession session) {
         System.out.println("进入");
         List<Manager> data = managerService.getAllManager();
         System.out.println("data为"+data);
-        return new Result(data, Code.GET_OK);
-    }*/
+        session.setAttribute("data",data);
+        return "management";
+    }
 
     @GetMapping("/{id}")
     public Result getById(@PathVariable Integer id) {
         Manager data = managerService.getManagerById(id);
         return new Result(data, Code.GET_OK);
     }
+
 
     @GetMapping("/name/{managerName}")
     public Result getByName(@PathVariable String managerName) {
