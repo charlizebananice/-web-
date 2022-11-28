@@ -106,9 +106,16 @@
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars/react -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>react</artifactId>
+            <version>15.0.0</version>
+        </dependency>
 
     </dependencies>
     <build>
         <finalName>Intra-cityDistributionManagementSystem</finalName>
     </build>
+
 </project>

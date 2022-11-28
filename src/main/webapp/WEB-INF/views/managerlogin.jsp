@@ -6,9 +6,15 @@
     <head>
         <title>管理员登录</title>
         <%--<link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bootstrap/4.6.1/css/bootstrap.min.css" />--%>
+
         <script src="<c:url value="/webjars/jquery/3.5.1/jquery.min.js"/>"></script>
         <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/4.6.1/css/bootstrap.min.css"/>"/>
         <script src="<c:url value="/webjars/bootstrap/4.6.1/js/bootstrap.min.js"/>"></script>
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <script src="<c:url value="/static/like_button.js"/>"></script>
 <%--
         <link rel="stylesheet" href="/static/bootstrap-4.6.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
 --%>
@@ -17,6 +23,8 @@
 --%>
     </head>
     <body>
+
+        <div id="like_button_container"></div>
         <div class="alert alert-primary" role="alert">
             A simple primary alert—check it out!
         </div>

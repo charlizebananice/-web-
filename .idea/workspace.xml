@@ -9,29 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/说明.txt" afterDir="false" />
+    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="成功将bootstrap引入jsp，webjars目录不能删除">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/like_button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-3.4.1-dist/js/npm.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +66,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Users/17274/ideaProject/Intra-cityDistributionManagementSystem/src/main/webapp/static",
     "nodejs_package_manager_path": "npm",
@@ -103,6 +88,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\static" />
+      <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\resources\webjars" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF\views" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF\lib" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF" />
@@ -265,7 +251,7 @@
       <workItem from="1669547470483" duration="230000" />
       <workItem from="1669547709886" duration="9236000" />
       <workItem from="1669565186843" duration="63000" />
-      <workItem from="1669605705474" duration="10714000" />
+      <workItem from="1669605705474" duration="13793000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -344,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669556939335</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="成功将bootstrap引入jsp，webjars目录不能删除">
+      <created>1669626920794</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669626920794</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +360,8 @@
     <MESSAGE value="添加了内部资源视图解析器，用于处理请求&#10;添加了日志filter" />
     <MESSAGE value="调整了domain包" />
     <MESSAGE value="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试jsp引入bootstrap但是失败了，应该是静态资源没有放行，bootstrap所需要的资源通过maven引入" />
+    <MESSAGE value="成功将bootstrap引入jsp，webjars目录不能删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="成功将bootstrap引入jsp，webjars目录不能删除" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
