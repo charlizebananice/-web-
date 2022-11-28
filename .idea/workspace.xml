@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="-web-:war" />
+      <artifact name="Intra-cityDistributionManagementSystem:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="yc第四次提交（补充了获取order总数，按订单状态获取总数，获取指定派送员订单等接口）">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/management.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/createDatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/management.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/management.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,20 +103,20 @@
       <recent name="nwpu.web.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.83">
+  <component name="RunManager" selected="Tomcat 服务器.Tomcat 8.5.82">
     <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests中的所有" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 8.5.83" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.83" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_261\jre" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/_web__war/manager" />
+    <configuration name="Tomcat 8.5.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.82" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_261\jre" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080//Intra_cityDistributionManagementSystem_war/manager" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="-web-:war">
+        <artifact name="Intra-cityDistributionManagementSystem:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/_web__war" />
+            <option name="CONTEXT_PATH" value="/Intra_cityDistributionManagementSystem_war" />
           </settings>
         </artifact>
       </deployment>
@@ -336,10 +336,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests | #3" />
-      <item itemvalue="HTTP Request.generated-requests中的所有" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.83" />
+      <item itemvalue="HTTP 请求.generated-requests | #3" />
+      <item itemvalue="HTTP 请求.generated-requests中的所有" />
+      <item itemvalue="Tomcat 服务器.Tomcat 8.5.82" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP 请求.generated-requests | #3" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBeansView">
