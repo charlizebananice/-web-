@@ -76,7 +76,6 @@
     <div>password :  ${manager.password}</div>
     <div></div>
 
-    <!--这里应发送delete请求-->
     <form action="http://localhost:8080/_web__war/manager/delete/${manager.managerId}" method="get">
 
         <input type="submit" value="删除" />
