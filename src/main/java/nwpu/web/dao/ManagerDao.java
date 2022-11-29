@@ -22,7 +22,7 @@ public interface ManagerDao {
     public int delete(@Param("id") Integer id);
 
     @Select("select * from tbl_manager where managerId = #{id} and deleteState = 0")
-    public Manager getById(@Param("id") Integer id);
+    public List<Manager> getById(@Param("id") Integer id);
 
     @Select("select * from tbl_manager where managerName = #{managerName} and deleteState = 0")
     public List<Manager> getByName(@Param("managerName") String managerName);

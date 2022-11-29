@@ -8,8 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import sun.misc.Request;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -24,48 +30,71 @@ public class ManagerController {
     }
 
     @PostMapping
-    public Result save(@RequestBody Manager manager) {
+    public void save(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Manager manager = new Manager();
+        manager.setManagerName(request.getParameter("managerName"));
+        manager.setPassword(request.getParameter("password"));
         System.out.println("进入controller"+manager);
         boolean flag = managerService.saveManager(manager);
         System.out.println("出去");
-        return new Result(flag, flag ? Code.SAVE_OK : Code.SAVE_ERR);
+        this.getAll(request,response);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String getAll(HttpSession session) {
+    @GetMapping
+    public void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("进入");
         List<Manager> data = managerService.getAllManager();
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/management.jsp").forward(request,response);
         System.out.println("data为"+data);
-        session.setAttribute("data",data);
-        return "management";
     }
 
-    @GetMapping("/{id}")
-    public Result getById(@PathVariable Integer id) {
-        Manager data = managerService.getManagerById(id);
-        return new Result(data, Code.GET_OK);
+    @GetMapping("/id")
+    public void getById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("进入根据id查");
+        String sid = request.getParameter("id");
+        Integer id = Integer.valueOf(sid);
+        System.out.println("查看ID    "+id);
+        List<Manager> data = managerService.getManagerById(id);
+        System.out.println("进入了get/id"+"   "+id);
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/management.jsp").forward(request,response);
+        System.out.println("data为"+data);
     }
 
 
-    @GetMapping("/name/{managerName}")
-    public Result getByName(@PathVariable String managerName) {
+    @GetMapping("/name")
+    public void getByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("进入根据name查");
+        String managerName = request.getParameter("managerName");
+        System.out.println("查看name    "+managerName);
         List<Manager> data = managerService.getManagerByManagerName(managerName);
-        return new Result(data, Code.GET_OK);
+        System.out.println("进入了get/name"+"   "+managerName);
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/management.jsp").forward(request,response);
+        System.out.println("data为"+data);
     }
 
 
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id) {
+    @GetMapping("/delete/{id}")
+    public void delete(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("进入delete"+id);
         boolean flag = managerService.deleteManager(id);
-        return new Result(flag, flag ? Code.DELETE_OK : Code.DELETE_ERR);
+        System.out.println("出delete"+id);
+        this.getAll(request,response);
     }
 
-    @PutMapping
-    public Result update(@RequestBody Manager manager) {
+    @GetMapping("/update/{id}")
+    public void update(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("进入update"+id);
+        Manager manager = new Manager();
+        manager.setManagerId(id);
+        manager.setManagerName(request.getParameter("managerName"));
+        manager.setPassword(request.getParameter("password"));
         System.out.println("进入controller"+manager);
         boolean flag = managerService.updateManager(manager);
-        return new Result(flag, flag ? Code.UPDATE_OK : Code.UPDATE_ERR);
+        this.getAll(request,response);
+
     }
 
     @RequestMapping

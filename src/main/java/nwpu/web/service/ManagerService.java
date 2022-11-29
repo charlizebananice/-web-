@@ -36,7 +36,7 @@ public interface ManagerService {
      * @param id
      * @return manager
      */
-    public Manager getManagerById(Integer id);
+    public List<Manager> getManagerById(Integer id);
     /**
      * 按managerName查找manager
      * @param managerName

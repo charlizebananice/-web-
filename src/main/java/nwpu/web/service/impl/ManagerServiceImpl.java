@@ -26,7 +26,7 @@ public class ManagerServiceImpl implements ManagerService {
         return managerDao.delete(id)>0;
     }
 
-    public Manager getManagerById(Integer id) {
+    public List<Manager> getManagerById(Integer id) {
         return managerDao.getById(id);
     }
 
