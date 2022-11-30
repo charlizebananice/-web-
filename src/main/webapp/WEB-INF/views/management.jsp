@@ -26,7 +26,7 @@
     新增管理员
 </button>
 <a class="btn btn-primary" href="http://localhost:8080/_web__war/order/" role="button">查看订单</a>
-
+<a class="btn btn-primary" href="http://localhost:8080/_web__war/deliveryMan/" role="button">查看派送员</a>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
