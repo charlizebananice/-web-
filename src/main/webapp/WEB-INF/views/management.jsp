@@ -25,6 +25,7 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     新增管理员
 </button>
+<a class="btn btn-primary" href="http://localhost:8080/_web__war/order/" role="button">查看订单</a>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,12 +83,12 @@
 
     </form>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal${manager.managerName}">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal${manager.managerId}">
         修改
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal${manager.managerName}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal${manager.managerId}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

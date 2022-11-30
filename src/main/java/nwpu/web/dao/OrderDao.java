@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 public interface OrderDao {
 
-    @Insert("insert into tbl_order (state, fee, shippingAddress, receiveAddress, managerId, deliverymanId) values( #{state}, #{fee}, #{shippingAddress}, #{receiveAddress}, #{managerId}, null)")
+    @Insert("insert into tbl_order (fee, shippingAddress, receiveAddress, managerId, deliverymanId) values( #{fee}, #{shippingAddress}, #{receiveAddress}, #{managerId}, null)")
     public int save(Order order);
 
     @Update("update tbl_order set state = #{state},fee = #{fee},shippingAddress = #{shippingAddress},receiveAddress = #{receiveAddress},managerId = #{managerId},deliverymanId = #{deliverymanId} where orderId = #{orderId}")
@@ -31,7 +31,7 @@ public interface OrderDao {
     public int getAllOrderSumByState(@Param("state") Integer state);
 
     @Select("select * from tbl_order where orderId = #{id} and deleteState = 0")
-    public Order getById(@Param("id") Integer id);
+    public List<Order> getById(@Param("id") Integer id);
 
     @Select("select * from tbl_order where state = #{state} and deleteState = 0")
     public List<Order> getByState(@Param("state") Integer state);

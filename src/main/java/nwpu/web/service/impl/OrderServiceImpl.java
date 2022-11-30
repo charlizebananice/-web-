@@ -25,7 +25,7 @@ public class OrderServiceImpl implements OrderService {
         return orderDao.delete(id)>0;
     }
 
-    public Order getOrderById(Integer id) {
+    public List<Order> getOrderById(Integer id) {
         return orderDao.getById(id);
     }
 

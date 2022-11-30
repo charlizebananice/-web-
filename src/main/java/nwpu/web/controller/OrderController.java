@@ -1,61 +1,98 @@
 package nwpu.web.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import nwpu.web.domain.common.Code;
 import nwpu.web.domain.entity.Order;
 import nwpu.web.domain.common.Result;
 import nwpu.web.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/order")
 public class OrderController {
     @Autowired
     private OrderService orderService;
 
     @PostMapping
-    public Result save(@RequestBody Order order) {
+    public void save(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Order order = new Order();
+        order.setFee(Integer.valueOf(request.getParameter("fee")));
+        order.setManagerId(Integer.valueOf(request.getParameter("managerId")));
+        order.setReceiveAddress(request.getParameter("receiveAddress"));
+        order.setShippingAddress(request.getParameter("shippingAddress"));
         System.out.println("进入controller"+order);
         boolean flag = orderService.saveOrder(order);
         System.out.println("出去");
-        return new Result(flag, flag ? Code.SAVE_OK : Code.SAVE_ERR);
+        this.getAll(request,response);
     }
 
-    @PutMapping
-    public Result update(@RequestBody Order order) {
+    @GetMapping("/update/{id}")
+    public void update(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("进入update"+id);
+        Order order = new Order();
+        order.setOrderId(id);
+        order.setFee(Integer.valueOf(request.getParameter("fee")));
+        order.setManagerId(Integer.valueOf(request.getParameter("managerId")));
+        order.setReceiveAddress(request.getParameter("receiveAddress"));
+        order.setShippingAddress(request.getParameter("shippingAddress"));
+        System.out.println("1111111111"+id);
+        order.setState(Integer.valueOf(request.getParameter("state")));
         System.out.println("进入controller"+order);
         boolean flag = orderService.updateOrder(order);
-        return new Result(flag, flag ? Code.UPDATE_OK : Code.UPDATE_ERR);
+        this.getAll(request,response);
     }
 
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id) {
+    @GetMapping("/delete/{id}")
+    public void delete(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("进入delete"+id);
         boolean flag = orderService.deleteOrder(id);
-        return new Result(flag, flag ? Code.DELETE_OK : Code.DELETE_ERR);
+        System.out.println("出delete"+id);
+        this.getAll(request,response);
     }
 
     @GetMapping
-    public Result getAll(){
+    public void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Order> data = orderService.getAllOrder();
-        return new Result(data, Code.GET_OK);
+
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/managementOrder.jsp").forward(request,response);
     }
 
-    @GetMapping("/{id}")
-    public Result getById(@PathVariable Integer id){
-        Order data = orderService.getOrderById(id);
-        return new Result(data, Code.GET_OK);
+    @GetMapping("/id")
+    public void getById(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("进入根据id查");
+        String sid = request.getParameter("id");
+        Integer id = Integer.valueOf(sid);
+        System.out.println("查看ID    "+id);
+        List<Order> data = orderService.getOrderById(id);
+        System.out.println("进入了get/id"+"   "+id);
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/managementOrder.jsp").forward(request,response);
+        System.out.println("data为"+data);
     }
 
-    @GetMapping("/name/{deliverymanName}")
-    public Result getById(@PathVariable String deliverymanName){
+    @GetMapping("/name")
+    public void getByDeliverymanName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("进入根据name查");
+        String deliverymanName = request.getParameter("deliverymanName");
+        System.out.println("查看name    "+deliverymanName);
         List<Order> data = orderService.getAllOrderByName(deliverymanName);
-        return new Result(data, Code.GET_OK);
+        System.out.println("进入了get/name"+"   "+deliverymanName);
+        data.addAll(orderService.getAllOrderByAddress(deliverymanName));
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/managementOrder.jsp").forward(request,response);
+        System.out.println("data为"+data);
     }
 
-    @GetMapping("/address/{address}")
+    @GetMapping("/address")
     public Result getByAddress(@PathVariable String address){
         List<Order> data = orderService.getAllOrderByAddress(address);
         return new Result(data, Code.GET_OK);

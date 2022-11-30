@@ -43,8 +43,8 @@ INSERT INTO tbl_deliveryMan(deliveryManName,password) VALUES('deliveryMan1','del
 INSERT INTO tbl_deliveryMan(deliveryManName,password) VALUES('deliveryMan2','deliveryMan2');
 select * from tbl_deliveryMan;
 
-INSERT INTO tbl_order(state,fee,shippingAddress,receiveAddress,managerID,deliveryManID)
-VALUES('0',100, '西工大东大村', '西工大海天苑2号楼', 2,1);
-INSERT INTO tbl_order(state,fee,shippingAddress,receiveAddress,managerID)
-VALUES('0',100, '西工大东大村', '西工大海天苑2号楼', 2);
+INSERT INTO tbl_order(fee,shippingAddress,receiveAddress,managerID,deliveryManID)
+VALUES(100, '西工大东大村', '西工大海天苑2号楼', 2,1);
+INSERT INTO tbl_order(fee,shippingAddress,receiveAddress,managerID)
+VALUES(100, '西工大东大村', '西工大海天苑2号楼', 2);
 select * from tbl_order;
