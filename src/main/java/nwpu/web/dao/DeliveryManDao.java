@@ -10,7 +10,7 @@ public interface DeliveryManDao {
     @Insert("insert into tbl_deliveryMan (deliveryManName,password) values(#{deliveryManName},#{password})")
     public int save(DeliveryMan deliveryMan);
 
-    @Update("update tbl_deliveryMan set email = #{email},phoneNo = #{phoneNo},password = #{password} where deliveryManID = #{deliveryManId}")
+    @Update("update tbl_deliveryMan set deliveryManName = #{deliveryManName},email = #{email},phoneNo = #{phoneNo},password = #{password} where deliveryManID = #{deliveryManId}")
     public int update(DeliveryMan deliveryMan);
 
     @Delete("update tbl_deliveryMan set deleteState = 1 where deliveryManID=#{id}")
