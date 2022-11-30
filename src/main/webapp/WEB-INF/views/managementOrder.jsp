@@ -74,7 +74,7 @@
 <form class="form-inline mb-2" action="http://localhost:8080/_web__war/order/name" method="get">
     <div class="form-group mx-sm-3 mb-2">
         <label for="inputPassword2" class="sr-only">Password</label>
-        <input required="required" type="text" class="form-control" id="inputPassword3" name="deliverymanName" placeholder="输入派送员姓名进行查找">
+        <input required="required" type="text" class="form-control" id="inputPassword3" name="deliverymanName" placeholder="输入派送员姓名或地址">
     </div>
     <button type="submit" class="btn btn-primary mb-2">查找</button>
 </form>
