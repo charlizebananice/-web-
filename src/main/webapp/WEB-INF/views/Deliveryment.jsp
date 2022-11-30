@@ -100,7 +100,7 @@
                     <form action="http://localhost:8080/Intra_cityDistributionManagementSystem_war/deliveryMan/update/${deliveryMan.deliveryManId}" method="get">
                         <div class="form-group">
                             <label for="exampleInputEmail1">用户名</label>
-                            <input type="text" class="form-control" id="exampleInputEmail2" name="deliveryManNameName" value="${deliveryMan.deliveryManName}" placeholder="${deliveryMan.deliveryManName}">
+                            <input type="text" class="form-control" id="exampleInputEmail2" name="deliveryManName" value="${deliveryMan.deliveryManName}" placeholder="${deliveryMan.deliveryManName}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">密码</label>
