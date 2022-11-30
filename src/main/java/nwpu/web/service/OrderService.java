@@ -33,7 +33,7 @@ public interface OrderService {
      * @param id
      * @return Order
      */
-    public Order getOrderById(Integer id);
+    public List<Order> getOrderById(Integer id);
 
     /**
      * 查找所有order
