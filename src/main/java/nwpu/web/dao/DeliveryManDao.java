@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface DeliveryManDao {
-    @Insert("insert into tbl_deliveryMan (deliveryManName,password) values(#{deliveryManName},#{password})")
+    @Insert("insert into tbl_deliveryMan (deliveryManName,password, phoneNo, email) values(#{deliveryManName},#{password},#{phoneNo}, #{email})")
     public int save(DeliveryMan deliveryMan);
 
     @Update("update tbl_deliveryMan set deliveryManName = #{deliveryManName},email = #{email},phoneNo = #{phoneNo},password = #{password} where deliveryManID = #{deliveryManId}")

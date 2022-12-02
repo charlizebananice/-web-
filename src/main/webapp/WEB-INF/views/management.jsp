@@ -25,8 +25,8 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     新增管理员
 </button>
-<a class="btn btn-primary" href="http://localhost:8080/_web__war/order/" role="button">查看订单</a>
-<a class="btn btn-primary" href="http://localhost:8080/_web__war/deliveryMan/" role="button">查看派送员</a>
+<a class="btn btn-primary" href="http://localhost:8080/_web__war/manager/order/" role="button">查看订单</a>
+<a class="btn btn-primary" href="http://localhost:8080/_web__war/manager/deliveryMan/" role="button">查看派送员</a>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -41,11 +41,11 @@
                 <form action="http://localhost:8080/_web__war/manager/" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1">用户名</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="managerName" placeholder="输入用户名">
+                        <input required="required" type="text" class="form-control" id="exampleInputEmail1" name="managerName" placeholder="输入用户名">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">密码</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="输入密码">
+                        <input required="required" type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="输入密码">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -101,11 +101,11 @@
                     <form action="http://localhost:8080/_web__war/manager/update/${manager.managerId}" method="get">
                         <div class="form-group">
                             <label for="exampleInputEmail1">用户名</label>
-                            <input type="text" class="form-control" id="exampleInputEmail2" name="managerName" value="${manager.managerName}" placeholder="${manager.managerName}">
+                            <input required="required" type="text" class="form-control" id="exampleInputEmail2" name="managerName" value="${manager.managerName}" placeholder="${manager.managerName}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">密码</label>
-                            <input type="text" class="form-control" id="exampleInputPassword2" name="password" value="${manager.password}" placeholder="${manager.password}">
+                            <input required="required" type="text" class="form-control" id="exampleInputPassword2" name="password" value="${manager.password}" placeholder="${manager.password}">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

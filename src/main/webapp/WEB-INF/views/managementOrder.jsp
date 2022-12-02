@@ -26,7 +26,7 @@
     发布订单
 </button>
 <a class="btn btn-primary" href="http://localhost:8080/_web__war/manager/" role="button">查看管理员</a>
-<a class="btn btn-primary" href="http://localhost:8080/_web__war/deliveryMan/" role="button">查看派送员</a>
+<a class="btn btn-primary" href="http://localhost:8080/_web__war/manager/deliveryMan/" role="button">查看派送员</a>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -38,7 +38,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="http://localhost:8080/_web__war/order/" method="post">
+                <form action="http://localhost:8080/_web__war/manager/order/" method="post">
                     <div class="form-group">
                         <label for="fee">费用</label>
                         <input required="required" type="number" class="form-control" id="fee" name="fee" placeholder="输入费用">
@@ -64,14 +64,14 @@
         </div>
     </div>
 </div>
-<form class="form-inline mb-2" action="http://localhost:8080/_web__war/order/id" method="get">
+<form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/order/id" method="get">
     <div class="form-group mx-sm-3 mb-2">
         <label for="inputPassword2" class="sr-only">Password</label>
         <input required="required" type="number" class="form-control" id="inputPassword2" name="id" placeholder="输入id进行查找">
     </div>
     <button type="submit" class="btn btn-primary mb-2">查找</button>
 </form>
-<form class="form-inline mb-2" action="http://localhost:8080/_web__war/order/name" method="get">
+<form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/order/name" method="get">
     <div class="form-group mx-sm-3 mb-2">
         <label for="inputPassword2" class="sr-only">Password</label>
         <input required="required" type="text" class="form-control" id="inputPassword3" name="deliverymanName" placeholder="输入派送员姓名或地址">
@@ -88,7 +88,7 @@
     <div>派送员ID :  ${order.deliverymanId}</div>
     <div></div>
 
-    <form action="http://localhost:8080/_web__war/order/delete/${order.orderId}" method="get">
+    <form action="http://localhost:8080/_web__war/manager/order/delete/${order.orderId}" method="get">
 
         <input type="submit" value="删除" />
 
@@ -109,7 +109,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="http://localhost:8080/_web__war/order/update/${order.orderId}" method="get">
+                    <form action="http://localhost:8080/_web__war/manager/order/update/${order.orderId}" method="get">
                         <div class="form-group">
                             <label for="state1">状态</label>
                             <input required="required" type="number" class="form-control" id="state1" name="state" placeholder="更改订单状态" value="${order.state}">
