@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-@RequestMapping("/manager/order")
+@RequestMapping("/order")
 public class OrderController {
     @Autowired
     private OrderService orderService;

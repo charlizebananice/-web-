@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-@RequestMapping("/manager/deliveryMan")
+@RequestMapping("/deliveryMan")
 public class DeliveryManController {
     @Autowired
     private DeliveryManService deliveryManService;
@@ -28,8 +28,6 @@ public class DeliveryManController {
         DeliveryMan deliveryMan = new DeliveryMan();
         deliveryMan.setDeliveryManName(request.getParameter("deliveryManName"));
         deliveryMan.setPassword(request.getParameter("password"));
-        deliveryMan.setEmail(request.getParameter("email"));
-        deliveryMan.setPhoneNo(request.getParameter("phoneNo"));
         System.out.println("进入controller"+deliveryMan);
         boolean flag = deliveryManService.saveDeliveryMan(deliveryMan);
         System.out.println("出去");
@@ -87,8 +85,6 @@ public class DeliveryManController {
         deliveryMan.setDeliveryManId(id);
         deliveryMan.setDeliveryManName(request.getParameter("deliveryManName"));
         deliveryMan.setPassword(request.getParameter("password"));
-        deliveryMan.setEmail(request.getParameter("email"));
-        deliveryMan.setPhoneNo(request.getParameter("phoneNo"));
         System.out.println("进入controller"+deliveryMan);
         boolean flag = deliveryManService.updateDeliveryMan(deliveryMan);
         this.getAll(request,response);

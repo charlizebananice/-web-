@@ -19,6 +19,7 @@ public class SpringMvcSupport extends WebMvcConfigurationSupport {
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         //对webjars中的资源放行
         registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");
+        //对static中的资源放行
         registry.addResourceHandler("/static/**").addResourceLocations("/static/");
 //        registry.addResourceHandler("/css/**").addResourceLocations("/css/");
 //        registry.addResourceHandler("/js/**").addResourceLocations("/js/");

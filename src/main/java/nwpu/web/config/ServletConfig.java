@@ -5,7 +5,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import javax.servlet.Filter;
 
-
+/**
+ * springmvc初始化类
+ */
 public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     //加载Spring配置类
     protected Class<?>[] getRootConfigClasses() {
