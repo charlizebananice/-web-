@@ -10,15 +10,12 @@
 <%@ page session="true" %>
 <html>
     <head>
-        <title>Title</title>
-        <script src="<c:url value="/webjars/jquery/3.5.1/jquery.min.js"/>"></script>
+        <title>管理员</title>
+        <script src="${pageContext.request.contextPath}/webjars/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/4.6.1/css/bootstrap.min.css"/>"/>
         <script src="<c:url value="/webjars/bootstrap/4.6.1/js/bootstrap.min.js"/>"></script>
-
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
-        <script src="<c:url value="/static/like_button.js"/>"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -128,10 +125,10 @@
             </div>
         </div>
         <%--管理员显示--%>
-        <div class="row row-cols-1 row-cols-md-4">
+        <div class="row row-cols-1 row-cols-md-4 mt-1 pl-1 pr-1"`>
             <c:forEach var="manager" items="${data}">
                 <div class="col mb-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 16rem;">
                         <img src="${pageContext.request.contextPath}/static/assets/人物.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">id:  ${manager.managerId}</h5>
@@ -176,6 +173,20 @@
                 </div>
             </c:forEach>
         </div>
-
+        <%--页脚--%>
+        <ul class="nav fixed-bottom">
+            <li class="nav-item">
+                <a class="nav-link active" href="${pageContext.request.contextPath}/manager">manager</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="${pageContext.request.contextPath}/order">Order</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="${pageContext.request.contextPath}/deliveryMan">DeliveryMan</a>
+            </li>
+            <li class="nav-item pull-right">
+                <a class="nav-link" href="https://github.com/charlizebananice/-web-">Github</a>
+            </li>
+        </ul>
     </body>
 </html>

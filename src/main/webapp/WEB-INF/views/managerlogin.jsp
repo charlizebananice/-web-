@@ -8,27 +8,55 @@
         <script src="<c:url value="/webjars/jquery/3.5.1/jquery.min.js"/>"></script>
         <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/4.6.1/css/bootstrap.min.css"/>"/>
         <script src="<c:url value="/webjars/bootstrap/4.6.1/js/bootstrap.min.js"/>"></script>
-
         <%--引入react--%>
         <script src="<c:url value="/static/react/react.development.js"/>" ></script>
         <script src="<c:url value="/static/react/react-dom.development.js"/>" ></script>
         <script src="<c:url value="/static/react/babel.min.js"/>" ></script>
-        <%--
-                <link rel="stylesheet" href="/static/bootstrap-4.6.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
-        --%>
-        <%--
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-p1KAotb3W9ndluCsqePPYnjRm3c6abdnIjo0tQwYUv83VsbsYd43RuofnFAaDo0E" crossorigin="anonymous">
-        --%>
     </head>
     <body>
-        <%--测试bootstrap--%>
-        <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
+        <div class="jumbotron col-md-10 m-auto ">
+            <h1 class="display-4">管理员入口！</h1>
+            <hr class="my-4">
+            <p>请先登录以访问管理后台</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#staticBackdrop">点击登录</a>
         </div>
 
-        <div id="root"></div>
+        <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">管理员登录</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="<c:url value="/manager/login"/>" method="post">
+                            <div class="form-group">
+                                <label>用户名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">密码</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </body>
-    <script type="text/babel">
+    <%--<script type="text/babel">
         class Message extends React.Component{
 
             handleDelete=(id)=>{
@@ -257,5 +285,5 @@
             }
         }
         ReactDOM.render(<App/>,document.getElementById('root'))
-    </script>
+    </script>--%>
 </html>

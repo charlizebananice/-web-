@@ -10,7 +10,7 @@
 <%@ page session="true" %>
 <html>
     <head>
-        <title>Title</title>
+        <title></title>
         <script src="<c:url value="/webjars/jquery/3.5.1/jquery.min.js"/>"></script>
         <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/4.6.1/css/bootstrap.min.css"/>"/>
         <script src="<c:url value="/webjars/bootstrap/4.6.1/js/bootstrap.min.js"/>"></script>
