@@ -8,7 +8,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @ComponentScan({"nwpu.web.controller","nwpu.web.filter","nwpu.web.config"})
-//开启json数据类型自动转换
 @EnableWebMvc
 public class SpringMvcConfig implements WebMvcConfigurer {
     //内部资源视图解析器,用于将提供的URI解析为实际URI,前缀+ view-name + suffix

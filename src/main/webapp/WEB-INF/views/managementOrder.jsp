@@ -45,7 +45,7 @@
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#searchManager">搜索订单</a>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">发布订单</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="${pageContext.request.contextPath}/order">显示全部的订单</a>
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/ordersum">显示历史订单</a>
                         </div>
                     </li>
                     <%--<li class="nav-item dropdown">

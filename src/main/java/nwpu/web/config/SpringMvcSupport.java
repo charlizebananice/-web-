@@ -1,7 +1,10 @@
 package nwpu.web.config;
 
+import nwpu.web.controller.HandlerInterceptor.ManagerInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.resource.PathResourceResolver;
@@ -10,13 +13,14 @@ import org.springframework.web.servlet.resource.WebJarsResourceResolver;
 //springMVC默认拦截静态资源，应对这些静态资源放行
 @Configuration
 public class SpringMvcSupport extends WebMvcConfigurationSupport {
-
+    @Autowired
+    private ManagerInterceptor managerInterceptor;
     /**
      * 放行静态资源方法
      * @param registry
      */
-    @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+
         //对webjars中的资源放行
         registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");
         //对static中的资源放行
@@ -36,5 +40,9 @@ public class SpringMvcSupport extends WebMvcConfigurationSupport {
 //        //并使用它自动为您解析任何 WebJar 资产的版本。为了启用此功能，您需要将 webjars-locator-core 库添加为应用程序的依赖项
 //        registry.addResourceHandler("/resources/**").addResourceLocations("/");
         super.addResourceHandlers(registry);
+    }
+    protected void addInterceptors(InterceptorRegistry registry) {
+        //配置拦截器
+        registry.addInterceptor(managerInterceptor).addPathPatterns("/manager","/manager/*");
     }
 }

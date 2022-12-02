@@ -10,14 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="管理员界面美化">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/react/babel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/react/react-dom.development.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/OrderHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/OrderHistory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/management.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/management.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managementOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managementOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,7 +72,7 @@
     "project.structure.proportion": "0.15039062",
     "project.structure.side.proportion": "0.31990793",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "326f3e98e3c91dc1f8fc5c6b309df2cf"
+    "spring.configuration.checksum": "6e35b4d059e54d648fbcdc025b20b11a"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -395,6 +391,7 @@
       <workItem from="1669565186843" duration="63000" />
       <workItem from="1669605705474" duration="13793000" />
       <workItem from="1669709155898" duration="10382000" />
+      <workItem from="1669996101797" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -494,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669988250157</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="管理员界面美化">
+      <created>1669993881974</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669993881974</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
