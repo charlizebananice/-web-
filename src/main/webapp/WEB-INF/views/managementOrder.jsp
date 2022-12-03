@@ -35,7 +35,7 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/manager/order">Order <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryman/">配送员 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryMan/">配送员 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -60,8 +60,19 @@
                         </div>
                     </li>--%>
                 </ul>
+                <div style="margin-right: 250px;display: flex;flex-direction: row">
+                <div class="form-inline my-2 my-lg-0" style="margin-right: 50px">
+                    等待接单: ${state0}<%--${}--%>
+                </div>
+                <div class="form-inline my-2 my-lg-0" style="margin-right: 50px">
+                    正在配送: ${state1}<%--${}--%>
+                </div>
+                <div class="form-inline my-2 my-lg-0" style="margin-right: 50px">
+                    历史订单: ${state2}<%--${}--%>
+                </div>
+                </div>
                 <div class="form-inline my-2 my-lg-0">
-                    欢迎您，<%--${}--%>
+                    欢迎您，${manager.managerId}-${manager.managerName}<%--${}--%>
                     <img src="${pageContext.request.contextPath}/static/assets/login.png" width="30" height="30" class="d-inline-block align-top">
                 </div>
             </div>
@@ -94,7 +105,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="managerId">管理员ID</label>
-                                <input readonly="readonly" required="required" type="text" class="form-control" id="managerId" name="managerId" value="123">
+                                <input readonly="readonly" required="required" type="text" class="form-control" id="managerId" name="managerId" value="${manager.managerId}">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

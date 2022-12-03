@@ -61,6 +61,13 @@ public class OrderController {
     @GetMapping
     public void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Order> data = orderService.getAllOrder();
+        Integer state0 = orderService.getAllOrderSumByState(0);
+        Integer state1 = orderService.getAllOrderSumByState(1);
+        Integer state2 = orderService.getAllOrderSumByState(2);
+
+        request.getSession().setAttribute("state0",state0);
+        request.getSession().setAttribute("state1",state1);
+        request.getSession().setAttribute("state2",state2);
 
         request.setAttribute("data",data);
         request.getRequestDispatcher("/WEB-INF/views/managementOrder.jsp").forward(request,response);
@@ -110,10 +117,12 @@ public class OrderController {
         return new Result(data , Code.GET_OK);
     }
 
-    @GetMapping("/orderSum")
-    public Result getAllOrderSum(){
-        Integer data = orderService.getAllOrderSum();
-        return new Result(data, Code.GET_OK);
+    @GetMapping("/ordersum")
+    public void getAllOrderSum(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Order> data = orderService.getAllOrderByState(2);
+        request.setAttribute("data",data);
+        request.getRequestDispatcher("/WEB-INF/views/managementOrder.jsp").forward(request,response);
+        System.out.println("data为"+data);
     }
 
     @GetMapping("/OrderSumByState/{state}")
