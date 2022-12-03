@@ -10,8 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="管理员界面美化">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryManSelf.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryman.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliverymanlogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryManController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryManController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryManselfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryManselfController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/DeliveryManInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/DeliveryManInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/ManagerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/ManagerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DeliverymentOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderHistory.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +77,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/17274/ideaProject/Intra-cityDistributionManagementSystem/src/main/webapp/static&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/17274/ideaProject/Intra-cityDistributionManagementSystem/src/main/webapp/WEB-INF/views&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;库&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15039062&quot;,
@@ -83,9 +96,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF\views" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\static" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\resources\webjars" />
-      <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF\views" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF\lib" />
       <recent name="D:\Users\17274\ideaProject\Intra-cityDistributionManagementSystem\src\main\webapp\WEB-INF" />
     </key>
@@ -108,7 +121,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.82" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_261\jre" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/_web__war/manager" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/_web__war/deliveryman" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Intra-cityDistributionManagementSystem:war">
@@ -390,7 +403,7 @@
       <workItem from="1669605705474" duration="13793000" />
       <workItem from="1669709155898" duration="10382000" />
       <workItem from="1669996101797" duration="1404000" />
-      <workItem from="1670046799889" duration="914000" />
+      <workItem from="1670046799889" duration="5250000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -511,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670047636152</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="管理员界面美化">
+      <created>1670047731948</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670047731948</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +557,8 @@
     <MESSAGE value="成功将bootstrap引入jsp，webjars目录不能删除" />
     <MESSAGE value="yc第五次提交（写了一点）" />
     <MESSAGE value="管理员界面美化" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理员界面美化" />
+    <MESSAGE value="拦截器" />
+    <option name="LAST_COMMIT_MESSAGE" value="拦截器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

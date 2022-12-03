@@ -34,6 +34,7 @@ public class ManagerLoginController {
         String managerName = request.getParameter("managerName");
         String password = request.getParameter("password");
         System.out.println("2");
+        System.out.println(managerName);
         List<Manager> managers = managerService.getManagerByManagerName(managerName);
         System.out.println("3");
         if(managers.isEmpty()){

@@ -41,7 +41,7 @@ public class DeliveryManController {
         System.out.println("进入");
         List<DeliveryMan> data = deliveryManService.getAllDeliveryMan();
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/Deliveryment.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryment.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 
@@ -54,7 +54,7 @@ public class DeliveryManController {
         List<DeliveryMan> data = deliveryManService.getDeliveryManById(id);
         System.out.println("进入了get/id"+"   "+id);
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/Deliveryment.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryment.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 
@@ -67,7 +67,7 @@ public class DeliveryManController {
         List<DeliveryMan> data = deliveryManService.getDeliveryManByDeliveryManName(deliveryManName);
         System.out.println("进入了get/name"+"   "+deliveryManName);
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/Deliveryment.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryment.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 

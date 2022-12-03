@@ -29,7 +29,7 @@ public class DeliveryManselfController {
         System.out.println("进入");
         List<DeliveryMan> data = deliveryManService.getDeliveryManById(6);
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/DeliveryManSelf.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryManSelf.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
     @GetMapping("/update/{id}")

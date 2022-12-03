@@ -75,7 +75,7 @@ public class OrderHistoryController {
         List<Order> data = deliveryOrderService.getMyAllOrder();
 
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/OrderHistory.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/orderHistory.jsp").forward(request,response);
     }
 
     @GetMapping("/id")
@@ -87,7 +87,7 @@ public class OrderHistoryController {
         List<Order> data = deliveryOrderService.getOrderById(id);
         System.out.println("进入了get/id"+"   "+id);
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/DeliverymentOrder.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryman.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 
@@ -100,7 +100,7 @@ public class OrderHistoryController {
         System.out.println("进入了get/name"+"   "+deliverymanName);
         data.addAll(deliveryOrderService.getAllOrderByAddress(deliverymanName));
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/DeliverymentOrder.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryman.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 

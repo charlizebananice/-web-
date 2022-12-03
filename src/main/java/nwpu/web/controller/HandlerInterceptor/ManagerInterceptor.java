@@ -17,7 +17,7 @@ public class ManagerInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse
             response, Object handler) throws Exception {
         HttpSession session = request.getSession();
-        Manager manager = (Manager)session.getAttribute("Manager");
+        Manager manager = (Manager)session.getAttribute("manager");
         if (manager!=null){
             return true;
         }else {

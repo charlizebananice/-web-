@@ -22,7 +22,7 @@ import java.util.List;
  *
  */
 @Controller
-@RequestMapping("/Deliveryorder")
+@RequestMapping("/deliveryman")
 public class DeliveryOrderController {
 
     @Autowired
@@ -64,7 +64,7 @@ public class DeliveryOrderController {
         List<Order> data = deliveryOrderService.getAllOrder();
 
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/DeliverymentOrder.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryman.jsp").forward(request,response);
     }
 
     @GetMapping("/id")
@@ -76,7 +76,7 @@ public class DeliveryOrderController {
         List<Order> data = deliveryOrderService.getOrderById(id);
         System.out.println("进入了get/id"+"   "+id);
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/DeliverymentOrder.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryman.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 
@@ -89,7 +89,7 @@ public class DeliveryOrderController {
         System.out.println("进入了get/name"+"   "+deliverymanName);
         data.addAll(deliveryOrderService.getAllOrderByAddress(deliverymanName));
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/DeliverymentOrder.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/deliveryman.jsp").forward(request,response);
         System.out.println("data为"+data);
     }
 
