@@ -33,8 +33,8 @@
                     <div class="modal-body">
                         <form action="http://localhost:8080/_web__war/managerlogin" method="post">
                             <div class="form-group">
-                                <label>用户名</label>
-                                <input type="text" class="form-control" name="managerName">
+                                <label>用户id</label>
+                                <input type="text" class="form-control" name="managerId">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">密码</label>

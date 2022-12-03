@@ -59,7 +59,7 @@
                     </li>--%>
                 </ul>
                 <div class="form-inline my-2 my-lg-0">
-                    欢迎您，<%--${}--%>
+                    欢迎您，${manager.managerId}-${manager.managerName}<%--${}--%>
                     <img src="${pageContext.request.contextPath}/static/assets/login.png" width="30" height="30" class="d-inline-block align-top">
 
                 </div>

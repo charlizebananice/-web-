@@ -31,11 +31,11 @@ public class ManagerLoginController {
         System.out.println("进入login");
         List<Manager> data = managerService.getAllManager();
         System.out.println("1");
-        String managerName = request.getParameter("managerName");
+        String managerId = request.getParameter("managerId");
         String password = request.getParameter("password");
         System.out.println("2");
-        System.out.println(managerName);
-        List<Manager> managers = managerService.getManagerByManagerName(managerName);
+        System.out.println(managerId);
+        List<Manager> managers = managerService.getManagerById(Integer.valueOf(managerId));
         System.out.println("3");
         if(managers.isEmpty()){
             System.out.println("4");
