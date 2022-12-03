@@ -22,7 +22,7 @@
     </head>
     <body>
         <a class="btn btn-primary" href="http://localhost:8080/Intra_cityDistributionManagementSystem_war/Deliveryorder" role="button">返回接单</a>
-        <c:forEach var="deliveryMan" items="${data}">
+
             <div>id :  ${deliveryMan.deliveryManId}</div>
             <div>name :  ${deliveryMan.deliveryManName}</div>
             <div>password :  ${deliveryMan.password}</div>
@@ -73,6 +73,5 @@
                     </div>
                 </div>
             </div>
-        </c:forEach>
     </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="true" %>
 <html>
@@ -34,15 +34,15 @@
                         <form action="http://localhost:8080/_web__war/managerlogin" method="post">
                             <div class="form-group">
                                 <label>用户id</label>
-                                <input type="text" class="form-control" name="managerId">
+                                <input type="text" class="form-control" name="managerId" value="${cookie.managerId.value}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">密码</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="${cookie.password.value}">
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember" value="1">
+                                <label class="form-check-label" for="exampleCheck1">记住我</label>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -33,6 +34,24 @@ public class ManagerLoginController {
         System.out.println("1");
         String managerId = request.getParameter("managerId");
         String password = request.getParameter("password");
+        String remember = request.getParameter("remember");
+        System.out.println("remember" + remember);
+        if("1".equals(remember)){
+            System.out.println("remember" + remember);
+            //勾选了，发送Cookie
+            //1. 创建Cookie对象
+            Cookie c_managerId = new Cookie("managerId",managerId);
+            Cookie c_password = new Cookie("password",password);
+            // 设置Cookie的存活时间
+            c_managerId.setMaxAge( 60 * 60 * 24 * 7);
+            c_password.setMaxAge( 60 * 60 * 24 * 7);
+
+            c_managerId.setPath(request.getContextPath());
+            c_password.setPath(request.getContextPath());
+            //2. 发送
+            response.addCookie(c_managerId);
+            response.addCookie(c_password);
+        }
         System.out.println("2");
         System.out.println(managerId);
         List<Manager> managers = managerService.getManagerById(Integer.valueOf(managerId));
