@@ -31,14 +31,14 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="${pageContext.request.contextPath}/managerlogin" method="post">
+                        <form action="http://localhost:8080/_web__war/managerlogin" method="post">
                             <div class="form-group">
                                 <label>用户名</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="managerName">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">密码</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
