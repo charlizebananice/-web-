@@ -11,9 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="管理员界面美化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/config/SpringMvcSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managementOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managementOrder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/DeliveryManInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/DeliveryManInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/ManagerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/ManagerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/managerlogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.82" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_261\jre" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/_web__war/order" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/_web__war/manager" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Intra-cityDistributionManagementSystem:war">
@@ -392,6 +393,7 @@
       <workItem from="1669605705474" duration="13793000" />
       <workItem from="1669709155898" duration="10382000" />
       <workItem from="1669996101797" duration="1404000" />
+      <workItem from="1670046799889" duration="821000" />
     </task>
     <task id="LOCAL-00001" summary="web环境搭建">
       <created>1668173683984</created>
@@ -498,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669993881974</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="管理员界面美化">
+      <created>1670046898660</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670046898660</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

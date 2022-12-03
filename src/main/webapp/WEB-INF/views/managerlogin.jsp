@@ -31,7 +31,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="<c:url value="/manager/login"/>" method="post">
+                        <form action="${pageContext.request.contextPath}/managerlogin" method="post">
                             <div class="form-group">
                                 <label>用户名</label>
                                 <input type="text" class="form-control">

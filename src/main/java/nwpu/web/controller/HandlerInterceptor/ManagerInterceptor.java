@@ -21,7 +21,7 @@ public class ManagerInterceptor implements HandlerInterceptor {
         if (manager!=null){
             return true;
         }else {
-            response.sendRedirect(request.getContextPath()+"/manager/login");
+            response.sendRedirect(request.getContextPath()+"/managerlogin");
             return false;
         }
     }

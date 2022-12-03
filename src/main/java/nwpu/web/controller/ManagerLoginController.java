@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/manager/login")
+@RequestMapping("/managerlogin")
 public class ManagerLoginController {
     @Autowired
     private ManagerService managerService;
@@ -16,5 +16,5 @@ public class ManagerLoginController {
         System.out.println("进入");
         return "managerlogin";
     }
-
+    //post方法
 }

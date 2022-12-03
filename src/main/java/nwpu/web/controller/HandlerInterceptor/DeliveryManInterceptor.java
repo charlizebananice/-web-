@@ -22,7 +22,7 @@ public class DeliveryManInterceptor implements HandlerInterceptor {
         if (deliveryMan!=null){
             return true;
         }else {
-            response.sendRedirect(request.getContextPath()+"/deliveryMan/login");
+            response.sendRedirect(request.getContextPath()+"/deliverymanlogin");
             return false;
         }
     }
