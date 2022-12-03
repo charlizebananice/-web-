@@ -32,10 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/order">Order <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/order">Order <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/deliveryman/">配送员 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryman/">配送员 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -79,7 +79,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="http://localhost:8080/_web__war/order/" method="post">
+                        <form action="http://localhost:8080/_web__war/manager/order/" method="post">
                             <div class="form-group">
                                 <label for="fee">费用</label>
                                 <input required="required" type="number" class="form-control" id="fee" name="fee" placeholder="输入费用">
@@ -116,14 +116,14 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/order/id" method="get">
+                        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/order/id" method="get">
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="inputPassword2" class="sr-only">Password</label>
                                 <input required="required" type="number" class="form-control" id="inputPassword2" name="id" placeholder="输入id进行查找">
                             </div>
                             <button type="submit" class="btn btn-primary mb-2">查找</button>
                         </form>
-                        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/order/name" method="get">
+                        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/order/name" method="get">
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="inputPassword2" class="sr-only">Password</label>
                                 <input required="required" type="text" class="form-control" id="inputPassword3" name="deliverymanName" placeholder="输入派送员姓名进行查找">
@@ -167,7 +167,7 @@
                             <h5 class="card-title">管理员ID :  ${order.managerId}</h5>
                             <h5 class="card-title">派送员ID :  ${order.deliverymanId}</h5>
 
-                            <form action="${pageContext.request.contextPath}/order/delete/${order.orderId}" method="get">
+                            <form action="${pageContext.request.contextPath}/manager/order/delete/${order.orderId}" method="get">
                                 <button type="submit" class="btn btn-secondary" data-dismiss="modal">删除</button>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal${order.orderId}">
                                     修改
@@ -184,7 +184,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="${pageContext.request.contextPath}/order/update/${order.orderId}" method="get">
+                                            <form action="${pageContext.request.contextPath}/manager/order/update/${order.orderId}" method="get">
                                                 <div class="form-group">
                                                     <label for="state1">状态</label>
                                                     <input required="required" type="number" class="form-control" id="state1" name="state" placeholder="更改订单状态" value="${order.state}">
@@ -226,10 +226,10 @@
                 <a class="nav-link active" href="${pageContext.request.contextPath}/manager">manager</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/order">Order</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/manager/order">Order</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/deliveryMan">DeliveryMan</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryMan">DeliveryMan</a>
             </li>
             <li class="nav-item pull-right">
                 <a class="nav-link" href="https://github.com/charlizebananice/-web-">Github</a>
