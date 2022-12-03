@@ -1,5 +1,6 @@
 package nwpu.web.config;
 
+import nwpu.web.controller.HandlerInterceptor.DeliveryManInterceptor;
 import nwpu.web.controller.HandlerInterceptor.ManagerInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +16,8 @@ import org.springframework.web.servlet.resource.WebJarsResourceResolver;
 public class SpringMvcSupport extends WebMvcConfigurationSupport {
     @Autowired
     private ManagerInterceptor managerInterceptor;
+    @Autowired
+    private DeliveryManInterceptor deliveryManInterceptor;
     /**
      * 放行静态资源方法
      * @param registry
@@ -44,5 +47,6 @@ public class SpringMvcSupport extends WebMvcConfigurationSupport {
     protected void addInterceptors(InterceptorRegistry registry) {
         //配置拦截器
         registry.addInterceptor(managerInterceptor).addPathPatterns("/manager","/manager/*");
+        registry.addInterceptor(deliveryManInterceptor).addPathPatterns("/deliveryman","/deliveryman/*");
     }
 }
