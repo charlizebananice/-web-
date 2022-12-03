@@ -26,7 +26,7 @@
             新增配送员
         </button>
         <a class="btn btn-primary" href="http://localhost:8080/_web__war/manager/" role="button">查看管理员</a>
-        <a class="btn btn-primary" href="http://localhost:8080/_web__war/order/" role="button">查看订单</a>
+        <a class="btn btn-primary" href="http://localhost:8080/_web__war/manager/order/" role="button">查看订单</a>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -38,7 +38,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="http://localhost:8080/_web__war/deliveryMan" method="post">
+                        <form action="http://localhost:8080/_web__war/manager/deliveryMan" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">用户名</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" name="deliveryManName" placeholder="输入用户名">
@@ -46,6 +46,14 @@
                             <div class="form-group">
                                 <label for="exampleInputPassword1">密码</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="输入密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">手机号</label>
+                                <input required="required" type="text" class="form-control" id="exampleInputEmail4" name="phoneNo" placeholder="输入手机号">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">邮箱</label>
+                                <input required="required" type="email" class="form-control" id="exampleInputPassword4" name="email" placeholder="输入邮箱">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -57,14 +65,14 @@
             </div>
         </div>
 
-        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/deliveryMan/id" method="get">
+        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/deliveryMan/id" method="get">
             <div class="form-group mx-sm-3 mb-2">
                 <label for="inputPassword2" class="sr-only">Password</label>
                 <input required="required" type="number" class="form-control" id="inputPassword2" name="id" placeholder="输入id进行查找">
             </div>
             <button type="submit" class="btn btn-primary mb-2">查找</button>
         </form>
-        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/deliveryMan/name" method="get">
+        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/deliveryMan/name" method="get">
             <div class="form-group mx-sm-3 mb-2">
                 <label for="inputPassword2" class="sr-only">Password</label>
                 <input required="required" type="text" class="form-control" id="inputPassword3" name="deliveryManName" placeholder="输入配送员姓名进行查找">
@@ -77,7 +85,7 @@
             <div>password :  ${deliveryMan.password}</div>
             <div></div>
 
-            <form action="http://localhost:8080/_web__war/deliveryMan/delete/${deliveryMan.deliveryManId}" method="get">
+            <form action="http://localhost:8080/_web__war/manager/deliveryMan/delete/${deliveryMan.deliveryManId}" method="get">
 
                 <input type="submit" value="删除" />
 
@@ -98,7 +106,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="http://localhost:8080/_web__war/deliveryMan/update/${deliveryMan.deliveryManId}" method="get">
+                            <form action="http://localhost:8080/_web__war/manager/deliveryMan/update/${deliveryMan.deliveryManId}" method="get">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">用户名</label>
                                     <input type="text" class="form-control" id="exampleInputEmail2" name="deliveryManName" value="${deliveryMan.deliveryManName}" placeholder="${deliveryMan.deliveryManName}">
@@ -106,6 +114,14 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">密码</label>
                                     <input type="text" class="form-control" id="exampleInputPassword2" name="password" value="${deliveryMan.password}" placeholder="${deliveryMan.password}">
+                                </div>
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">手机号</label>
+                                    <input required="required" type="text" class="form-control" id="exampleInputEmail4" name="phoneNo" placeholder="输入手机号">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">邮箱</label>
+                                    <input required="required" type="email" class="form-control" id="exampleInputPassword4" name="email" placeholder="输入邮箱">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
