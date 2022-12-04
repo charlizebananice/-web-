@@ -18,6 +18,22 @@
             <h1 class="display-4">管理员入口！</h1>
             <hr class="my-4">
             <p>请先登录以访问管理后台</p>
+            <c:if test="${msg eq '用户不存在!'}">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" style="width: 200px">
+                    <strong>${msg}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            </c:if>
+            <c:if test="${msg eq '密码错误!'}">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" style="width: 200px">
+                    <strong>${msg}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </c:if>
             <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#staticBackdrop">点击登录</a>
         </div>
 
