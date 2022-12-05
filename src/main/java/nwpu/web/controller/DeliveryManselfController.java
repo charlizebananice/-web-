@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 /*
@@ -27,10 +28,13 @@ public class DeliveryManselfController {
     @GetMapping
     public void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("进入");
-        List<DeliveryMan> data = deliveryManService.getDeliveryManById(6);
-        request.setAttribute("data",data);
+        HttpSession session = request.getSession();
+        DeliveryMan d = (DeliveryMan) session.getAttribute("deliveryMan");
+        List<DeliveryMan> deliveryMan = deliveryManService.getDeliveryManById(d.getDeliveryManId());
+        request.setAttribute("deliveryMan",deliveryMan.get(0));
+        System.out.println("deliveryMan为"+deliveryMan.get(0));
         request.getRequestDispatcher("/WEB-INF/views/deliveryManSelf.jsp").forward(request,response);
-        System.out.println("data为"+data);
+        System.out.println("deliveryMan为"+deliveryMan);
     }
     @GetMapping("/update/{id}")
     public void update(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
