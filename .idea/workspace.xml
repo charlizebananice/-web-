@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="管理员界面美化">
+    <list default="true" id="65997f49-0ed0-4115-ab88-2573fa3ea2e8" name="变更" comment="拦截器解决了，配送员jsp的命名有点问题，要改下，然后就是jsp中表单的id属性我不知道咋用的，可以看下">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryManSelf.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryman.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliverymanlogin.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryment.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
@@ -22,9 +21,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/DeliveryOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/DeliveryManInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/DeliveryManInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/ManagerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/HandlerInterceptor/ManagerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/ManagerLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nwpu/web/controller/OrderHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Deliveryment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Deliveryment.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/DeliverymentOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderHistory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryman.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deliveryman.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -558,7 +559,8 @@
     <MESSAGE value="yc第五次提交（写了一点）" />
     <MESSAGE value="管理员界面美化" />
     <MESSAGE value="拦截器" />
-    <option name="LAST_COMMIT_MESSAGE" value="拦截器" />
+    <MESSAGE value="拦截器解决了，配送员jsp的命名有点问题，要改下，然后就是jsp中表单的id属性我不知道咋用的，可以看下" />
+    <option name="LAST_COMMIT_MESSAGE" value="拦截器解决了，配送员jsp的命名有点问题，要改下，然后就是jsp中表单的id属性我不知道咋用的，可以看下" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

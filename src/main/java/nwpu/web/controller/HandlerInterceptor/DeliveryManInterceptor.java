@@ -17,15 +17,14 @@ public class DeliveryManInterceptor implements HandlerInterceptor {
     //用户已登录返回true，否则返回false
     public boolean preHandle(HttpServletRequest request, HttpServletResponse
             response, Object handler) throws Exception {
-        /*HttpSession session = request.getSession();
-        DeliveryMan deliveryMan = (DeliveryMan)session.getAttribute("deliveryMan");
+        HttpSession session = request.getSession();
+        DeliveryMan deliveryMan = (DeliveryMan)session.getAttribute("deliveryman");
         if (deliveryMan!=null){
             return true;
         }else {
             response.sendRedirect(request.getContextPath()+"/deliverymanlogin");
             return false;
-        }*/
-        return true;
+        }
     }
 
     //原始方法调用后执行的内容

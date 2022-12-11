@@ -23,7 +23,7 @@
     <body>
         <%--banner--%>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/manager">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/deliveryman">
                 <img src="<c:url value="/static/assets/home.png"/>" width="30" height="30"
                      class="d-inline-block align-top" alt="">
                 配送员
@@ -81,7 +81,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="">修改管理员信息</h5>
+                                <h5 class="modal-title" >管理员个人信息</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

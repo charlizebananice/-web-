@@ -35,7 +35,7 @@ public class ManagerController {
         manager.setManagerName(request.getParameter("managerName"));
         manager.setPassword(request.getParameter("password"));
         System.out.println("进入controller"+manager);
-        boolean flag = managerService.saveManager(manager);
+        boolean flag =   managerService.saveManager(manager);
         System.out.println("出去");
         this.getAll(request,response);
     }
