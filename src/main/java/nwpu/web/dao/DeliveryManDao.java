@@ -25,6 +25,15 @@ public interface DeliveryManDao {
     @Select("select * from tbl_deliveryMan where deleteState = 0")
     public List<DeliveryMan> getAll();
 
+    @Update("update tbl_deliveryMan set state = 1 where deliveryManID = #{deliveryManId}")
+    public int updateState(DeliveryMan deliveryMan);
+
+    @Update("update tbl_deliveryMan set state = 0 where deliveryManID = #{deliveryManId}")
+    public int updateState0(DeliveryMan deliveryMan);
+
+    @Select("select state from tbl_deliveryMan where deliveryManID = #{deliveryManId}")
+    public  Integer nowState(DeliveryMan deliveryMan);
+
 
 
 }

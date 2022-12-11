@@ -40,9 +40,6 @@ public class DeliveryOrderServiceImpl implements DeliveryOrderService {
         return deliveryOrderDao.getAll();
     }
 
-    public List<Order> getMyAllOrder() {
-        return deliveryOrderDao.getMyAll();
-    }
 
     public List<Order> getAllOrderByState(Integer state) {
         return deliveryOrderDao.getByState(state);
@@ -66,5 +63,17 @@ public class DeliveryOrderServiceImpl implements DeliveryOrderService {
 
     public int getAllOrderSumByState(Integer state) {
         return deliveryOrderDao.getAllOrderSumByState(state);
+    }
+
+    public List<Order> getOrderByDeliveymanId(Integer id) {
+        return deliveryOrderDao.getByDeliveymanId(id);
+    }
+
+    public List<Order> getByDeliveymanId(Integer id) {
+        return deliveryOrderDao.getByDeliveymanId(id);
+    }
+
+    public Integer nowState(Order order) {
+        return deliveryOrderDao.nowState(order);
     }
 }

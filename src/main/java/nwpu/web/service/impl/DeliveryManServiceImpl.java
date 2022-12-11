@@ -42,4 +42,18 @@ public class DeliveryManServiceImpl implements DeliveryManService {
         System.out.println("进入service");
         return deliveryManDao.getAll();
     }
+
+    public boolean updateState(DeliveryMan deliveryMan) {
+        return deliveryManDao.updateState(deliveryMan)>0;
+    }
+
+    public boolean updateState0(DeliveryMan deliveryMan) {
+        return deliveryManDao.updateState0(deliveryMan)>0;
+    }
+
+    public Integer nowState(DeliveryMan deliveryMan) {
+        return deliveryManDao.nowState(deliveryMan);
+    }
+
+
 }

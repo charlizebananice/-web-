@@ -1,5 +1,6 @@
 package nwpu.web.dao;
 
+import nwpu.web.domain.entity.DeliveryMan;
 import nwpu.web.domain.entity.Order;
 import org.apache.ibatis.annotations.*;
 
@@ -11,7 +12,7 @@ public interface DeliveryOrderDao {
     @Insert("insert into tbl_order (fee, shippingAddress, receiveAddress, managerId, deliverymanId) values( #{fee}, #{shippingAddress}, #{receiveAddress}, #{managerId}, null)")
     public int save(Order order);
 
-    @Update("update tbl_order set state = 1,deliverymanId = 6 where orderId = #{orderId}")
+    @Update("update tbl_order set state = 1,deliverymanId = #{deliverymanId} where orderId = #{orderId}")
     public int update(Order order);
 
     @Update("update tbl_order set state = 2 where orderId = #{orderId}")
@@ -26,8 +27,6 @@ public interface DeliveryOrderDao {
     @Select("select * from tbl_order where deleteState = 0 and state=0")
     public List<Order> getAll();
 
-    @Select("select * from tbl_order where deleteState = 0 and deliverymanId = 6")
-    public List<Order> getMyAll();
 
     @Select("select * from tbl_order where deliverymanId = #{id} and deleteState = 0")
     public List<Order> getAllDeliverymanOrder(@Param("id") Integer id);
@@ -41,6 +40,9 @@ public interface DeliveryOrderDao {
     @Select("select * from tbl_order where orderId = #{id} and deleteState = 0 and state=0")
     public List<Order> getById(@Param("id") Integer id);
 
+    @Select("select * from tbl_order where deliverymanId = #{id} and deleteState = 0 ")
+    public List<Order> getByDeliveymanId(@Param("id") Integer id);
+
     @Select("select * from tbl_order where state = #{state} and deleteState = 0 and state=0")
     public List<Order> getByState(@Param("state") Integer state);
 
@@ -49,4 +51,7 @@ public interface DeliveryOrderDao {
 
     @Select("select a.orderId,a.state,a.fee,a.deleteState,a.shippingAddress,a.receiveAddress,a.managerId,a.deliverymanId from tbl_order a left join tbl_deliveryman b on a.deliverymanId = b.deliverymanId where b.deliverymanName = #{name} and a.deleteState = 0 and state=0")
     public List<Order> getByName(@Param("name") String name);
+
+    @Select("select state from tbl_order where orderId = #{orderId}")
+    public  Integer nowState(Order order);
 }
