@@ -11,7 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
+/*
+ *
+ * 管理员对配送员管理功能实现
+ *
+ */
 @Controller
 @RequestMapping("/manager/deliveryMan")
 public class DeliveryManController {
@@ -94,7 +98,12 @@ public class DeliveryManController {
         this.getAll(request,response);
 
     }
+    @GetMapping("/getMessage/{id}")
+    public void getMessage(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("getmessage"+id);
+        this.getAll(request,response);
 
+    }
     @RequestMapping
     public String test() {
         System.out.println("测试。。。");

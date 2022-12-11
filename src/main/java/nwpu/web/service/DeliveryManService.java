@@ -47,4 +47,10 @@ public interface DeliveryManService {
      * @return List<Manager>
      */
     public List<DeliveryMan> getAllDeliveryMan();
+
+    public boolean updateState(DeliveryMan deliveryMan);
+
+    public boolean updateState0(DeliveryMan deliveryMan);
+
+    public Integer nowState(DeliveryMan deliveryMan);
 }

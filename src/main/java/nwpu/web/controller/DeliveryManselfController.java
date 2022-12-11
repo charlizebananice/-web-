@@ -26,9 +26,8 @@ public class DeliveryManselfController {
     private DeliveryManService deliveryManService;
 
     @GetMapping
-    public void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入");
-        HttpSession session = request.getSession();
         DeliveryMan d = (DeliveryMan) session.getAttribute("deliveryMan");
         List<DeliveryMan> deliveryMan = deliveryManService.getDeliveryManById(d.getDeliveryManId());
         request.setAttribute("deliveryMan",deliveryMan.get(0));
@@ -37,7 +36,7 @@ public class DeliveryManselfController {
         System.out.println("deliveryMan为"+deliveryMan);
     }
     @GetMapping("/update/{id}")
-    public void update(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void update(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入update"+id);
         DeliveryMan deliveryMan = new DeliveryMan();
         deliveryMan.setDeliveryManId(id);
@@ -45,9 +44,10 @@ public class DeliveryManselfController {
         deliveryMan.setEmail(request.getParameter("email"));
         deliveryMan.setDeliveryManName(request.getParameter("deliveryManName"));
         deliveryMan.setPassword(request.getParameter("password"));
+        session.setAttribute("deliveryMan",deliveryMan);
         System.out.println("进入controller"+deliveryMan);
         boolean flag = deliveryManService.updateDeliveryMan(deliveryMan);
-        this.getAll(request,response);
+        this.getAll(request,response,session);
 
     }
 

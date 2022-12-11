@@ -45,13 +45,7 @@ public interface DeliveryOrderService {
      */
     public List<Order> getAllOrder();
 
-    /**
-     * 查找所有我的order
-     * @param
-     * @return List<Order>
-     */
 
-    public List<Order> getMyAllOrder();
 
     /**
      * 按state查找所有order
@@ -94,4 +88,13 @@ public interface DeliveryOrderService {
      * @return List<Order>
      */
     public int getAllOrderSumByState(Integer state);
+    /**
+     * 查找对应配送员的订单
+     * @param id
+     * @return List<Order>
+     */
+
+    public List<Order> getOrderByDeliveymanId(Integer id);
+
+    public Integer nowState(Order order);
 }
