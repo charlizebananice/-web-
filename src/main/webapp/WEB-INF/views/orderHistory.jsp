@@ -23,7 +23,7 @@
     <body>
         <!-- Button trigger modal -->
 
-        <a class="btn btn-primary" href="http://localhost:8080/Intra_cityDistributionManagementSystem_war/Deliveryorder" role="button">返回接单</a>
+        <a class="btn btn-primary" href="http://localhost:8080/Intra_cityDistributionManagementSystem_war/deliveryorder" role="button">返回接单</a>
         <!-- Modal -->
 
 

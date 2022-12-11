@@ -27,7 +27,7 @@
             <div>name :  ${deliveryMan.deliveryManName}</div>
             <div>password :  ${deliveryMan.password}</div>
             <div>phoneNo :  ${deliveryMan.phoneNo}</div>
-            <div>password :  ${deliveryMan.email}</div>
+            <div>email :  ${deliveryMan.email}</div>
             <div></div>
 
 
