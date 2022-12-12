@@ -21,7 +21,7 @@
         <script src="<c:url value="/static/like_button.js"/>"></script>
     </head>
     <body>
-        <a class="btn btn-primary" href="http://localhost:8080/Intra_cityDistributionManagementSystem_war/deliveryorder" role="button">返回接单</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/Deliveryorder" role="button">返回接单</a>
 
             <div>id :  ${deliveryMan.deliveryManId}</div>
             <div>name :  ${deliveryMan.deliveryManName}</div>
@@ -47,7 +47,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="http://localhost:8080/Intra_cityDistributionManagementSystem_war/deliveryManself/update/${deliveryMan.deliveryManId}" method="get">
+                            <form action="${pageContext.request.contextPath}/deliveryManself/update/${deliveryMan.deliveryManId}" method="get">
                                 <div class="form-group">
                                     <label for="exampleInputEmail2">用户名</label>
                                     <input type="text" class="form-control" id="exampleInputEmail2" name="deliveryManName" value="${deliveryMan.deliveryManName}" placeholder="${deliveryMan.deliveryManName}">
@@ -73,6 +73,5 @@
                     </div>
                 </div>
             </div>
-
     </body>
 </html>

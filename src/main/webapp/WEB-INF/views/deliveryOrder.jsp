@@ -120,7 +120,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form action="http://localhost:8080/_web__war/manager/deliveryMan/update/${deliveryMan.deliveryManId}" method="get">
+                                <form action="${pageContext.request.contextPath}/manager/deliveryMan/update/${deliveryMan.deliveryManId}" method="get">
                                     <div class="form-group">
                                         <label for="">用户名</label>
                                         <input type="text" class="form-control" id="exampleInputEmail2" name="deliveryManName" value="${deliveryMan.deliveryManName}" placeholder="${deliveryMan.deliveryManName}">

@@ -47,7 +47,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="http://localhost:8080/_web__war/managerlogin" method="post">
+                        <form action="${pageContext.request.contextPath}/managerlogin" method="post">
                             <div class="form-group">
                                 <label>用户id</label>
                                 <input type="text" class="form-control" name="managerId" value="${cookie.managerId.value}">

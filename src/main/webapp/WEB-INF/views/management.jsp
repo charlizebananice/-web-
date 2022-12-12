@@ -33,7 +33,7 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/manager/order">Order <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryMan/">配送员 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryman">配送员 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -77,7 +77,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="http://localhost:8080/_web__war/manager/" method="post">
+                        <form action="${pageContext.request.contextPath}/manager/" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">用户名</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" name="managerName" placeholder="输入用户名">
@@ -106,14 +106,14 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/id" method="get">
+                        <form class="form-inline mb-2" action="${pageContext.request.contextPath}/manager/id" method="get">
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="inputPassword2" class="sr-only">Password</label>
                                 <input required="required" type="number" class="form-control" id="inputPassword2" name="id" placeholder="输入id进行查找">
                             </div>
                             <button type="submit" class="btn btn-primary mb-2">查找</button>
                         </form>
-                        <form class="form-inline mb-2" action="http://localhost:8080/_web__war/manager/name" method="get">
+                        <form class="form-inline mb-2" action="${pageContext.request.contextPath}/manager/name" method="get">
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="inputPassword2" class="sr-only">Password</label>
                                 <input required="required" type="text" class="form-control" id="inputPassword3" name="managerName" placeholder="输入管理员姓名进行查找">
