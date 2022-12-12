@@ -35,9 +35,11 @@ public class DeliveryOrderController {
     private DeliveryManService deliveryManService;
 
 
-
-
-
+    /**
+     * 实现接单功能，若配送员正在配送则无法接单
+     * @param request
+     * @return
+     */
     @GetMapping("/update/{id}")
     public void update(@PathVariable Integer id, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入update" + id);
@@ -45,7 +47,6 @@ public class DeliveryOrderController {
         order.setOrderId(id);
         DeliveryMan deliveryMan = (DeliveryMan) session.getAttribute("deliveryMan");
         order.setDeliverymanId(deliveryMan.getDeliveryManId());
-
         System.out.println("deliverymanid" + deliveryMan.getDeliveryManId());
         System.out.println("进入controller" + order);
         Integer state = deliveryManService.nowState(deliveryMan);

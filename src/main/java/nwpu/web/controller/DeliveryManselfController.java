@@ -24,7 +24,11 @@ public class DeliveryManselfController {
 
     @Autowired
     private DeliveryManService deliveryManService;
-
+    /**
+     * 通过session获取登录的配送员的信息
+     * @param request
+     * @return
+     */
     @GetMapping
     public void getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入");
@@ -35,6 +39,11 @@ public class DeliveryManselfController {
         request.getRequestDispatcher("/WEB-INF/views/deliveryManSelf.jsp").forward(request,response);
         System.out.println("deliveryMan为"+deliveryMan);
     }
+    /**
+     * 实现修改个人信息功能
+     * @param request
+     * @return
+     */
     @GetMapping("/update/{id}")
     public void update(@PathVariable Integer id,HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入update"+id);

@@ -28,16 +28,11 @@ public class OrderHistoryController {
     @Autowired
     private DeliveryManService deliveryManService;
 
-
-    @GetMapping("/update/{id}")
-    public void update(@PathVariable Integer id, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
-        System.out.println("进入update"+id);
-        Order order = new Order();
-        order.setOrderId(id);
-        System.out.println("进入controller"+order);
-        boolean flag = deliveryOrderService.updateOrder(order);
-        this.getAll(request,response,session);
-    }
+    /**
+     * 点击完成订单，将订单状态变为已完成
+     * @param request
+     * @return
+     */
     @GetMapping("/update1/{id}")
     public void update1(@PathVariable Integer id, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         DeliveryMan deliveryMan = (DeliveryMan) session.getAttribute("deliveryMan");
@@ -54,7 +49,13 @@ public class OrderHistoryController {
             System.out.println("该订单已完成！"+order);
         }
         this.getAll(request,response,session);
-    }@GetMapping("/update2/{id}")
+    }
+    /**
+     * 退单功能
+     * @param request
+     * @return
+     */
+    @GetMapping("/update2/{id}")
     public void update2(@PathVariable Integer id, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         DeliveryMan deliveryMan = (DeliveryMan) session.getAttribute("deliveryMan");
         System.out.println("进入update0"+id);
@@ -71,7 +72,11 @@ public class OrderHistoryController {
         }
         this.getAll(request,response,session);
     }
-
+    /**
+     * 获取该配送员订单
+     * @param request
+     * @return
+     */
 
     @GetMapping
     public void getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
@@ -88,27 +93,7 @@ public class OrderHistoryController {
 
 
 
-    @GetMapping("/state/{state}")
-    public Result getByState(@PathVariable Integer state){
-        List<Order> data = deliveryOrderService.getAllOrderByState(state);
-        return new Result(data , Code.GET_OK);
-    }
 
-    @GetMapping("/deliveryman/{deliverymanId}")
-    public Result getAllDeliverymanOrder(@PathVariable Integer deliverymanId){
-        List<Order> data = deliveryOrderService.getAllDeliverymanOrder(deliverymanId);
-        return new Result(data , Code.GET_OK);
-    }
 
-    @GetMapping("/orderSum")
-    public Result getAllOrderSum(){
-        Integer data = deliveryOrderService.getAllOrderSum();
-        return new Result(data, Code.GET_OK);
-    }
 
-    @GetMapping("/OrderSumByState/{state}")
-    public Result getAllOrderSumByState(@PathVariable Integer state){
-        Integer data = deliveryOrderService.getAllOrderSumByState(state);
-        return new Result(data,Code.GET_OK);
-    }
 }
