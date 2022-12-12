@@ -38,7 +38,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="http://localhost:8080/_web__war/manager/deliveryMan" method="post">
+                        <form action="http://localhost:8080/_web__war/manager/deliveryman" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">用户名</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" name="deliveryManName" placeholder="输入用户名">

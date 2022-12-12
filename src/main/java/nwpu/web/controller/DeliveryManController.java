@@ -17,7 +17,7 @@ import java.util.List;
  *
  */
 @Controller
-@RequestMapping("/manager/deliveryMan")
+@RequestMapping("/manager/deliveryman")
 public class DeliveryManController {
     @Autowired
     private DeliveryManService deliveryManService;
