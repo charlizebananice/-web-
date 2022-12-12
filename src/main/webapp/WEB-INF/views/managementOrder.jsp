@@ -214,7 +214,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="managerId">管理员ID</label>
-                                                    <input readonly="readonly" required="required" type="text" class="form-control" id="managerId1" name="managerId" value="518" value="${order.managerId}">
+                                                    <input readonly="readonly" required="required" type="text" class="form-control" id="managerId1" name="managerId"  value="${order.managerId}">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </form>

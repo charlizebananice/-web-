@@ -40,8 +40,11 @@ public interface DeliveryOrderDao {
     @Select("select * from tbl_order where orderId = #{id} and deleteState = 0 and state=0")
     public List<Order> getById(@Param("id") Integer id);
 
-    @Select("select * from tbl_order where deliverymanId = #{id} and deleteState = 0 ")
+    @Select("select * from tbl_order where deliverymanId = #{id} and deleteState = 0 and state = 2")
     public List<Order> getByDeliveymanId(@Param("id") Integer id);
+
+    @Select("select * from tbl_order where deliverymanId = #{id} and deleteState = 0 and state = 1")
+    public List<Order> getNowByDeliveymanId(@Param("id") Integer id);
 
     @Select("select * from tbl_order where state = #{state} and deleteState = 0 and state=0")
     public List<Order> getByState(@Param("state") Integer state);

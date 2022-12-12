@@ -97,4 +97,6 @@ public interface DeliveryOrderService {
     public List<Order> getOrderByDeliveymanId(Integer id);
 
     public Integer nowState(Order order);
+
+    public List<Order> getNowByDeliveymanId(Integer id);
 }

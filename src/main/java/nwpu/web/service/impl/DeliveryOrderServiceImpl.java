@@ -69,8 +69,9 @@ public class DeliveryOrderServiceImpl implements DeliveryOrderService {
         return deliveryOrderDao.getByDeliveymanId(id);
     }
 
-    public List<Order> getByDeliveymanId(Integer id) {
-        return deliveryOrderDao.getByDeliveymanId(id);
+
+    public List<Order> getNowByDeliveymanId(Integer id) {
+        return deliveryOrderDao.getNowByDeliveymanId(id);
     }
 
     public Integer nowState(Order order) {

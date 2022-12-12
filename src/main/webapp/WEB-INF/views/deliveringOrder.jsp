@@ -89,7 +89,7 @@
 
                     <form action="${pageContext.request.contextPath}/manager/order/delete/${order.orderId}" method="get">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal${order.orderId}">
-                            接单
+                            完成订单
                         </button>
                     </form>
                         <%--修改订单信息--%>
@@ -103,7 +103,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="${pageContext.request.contextPath}/deliveryorder/update/${order.orderId}" method="get">
+                                    <form action="${pageContext.request.contextPath}/deliveringorder/update1/${order.orderId}" method="get">
                                         <div class="form-group">
                                             <label >状态</label>
                                             <div class="form-control">${order.state}</div>

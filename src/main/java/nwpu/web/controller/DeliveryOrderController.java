@@ -20,13 +20,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-/*
- *
- * 配送员订单管理
+/**
+ * 配送员接单Controller
  *
  */
 @Controller
-@RequestMapping("/deliveryman/deliveryorder")
+@RequestMapping("/deliveryorder")
 public class DeliveryOrderController {
 
     @Autowired
@@ -65,17 +64,18 @@ public class DeliveryOrderController {
 
 
     @GetMapping
-    public String getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
+    public void getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入");
         DeliveryMan d = (DeliveryMan) session.getAttribute("deliveryMan");
         List<DeliveryMan> deliveryMan = deliveryManService.getDeliveryManById(d.getDeliveryManId());
         request.setAttribute("deliveryMan",deliveryMan.get(0));
         System.out.println("deliveryMan为"+deliveryMan.get(0));
         System.out.println("deliveryMan为"+deliveryMan);
-
         List<Order> data = deliveryOrderService.getAllOrder();
         request.setAttribute("data", data);
-        return "deliveryOrder";
+        request.getRequestDispatcher("/WEB-INF/views/deliveryOrder.jsp").forward(request,response);
+
+
     }
 
     @GetMapping("/id")
@@ -134,5 +134,6 @@ public class DeliveryOrderController {
         Integer data = deliveryOrderService.getAllOrderSumByState(state);
         return new Result(data, Code.GET_OK);
     }
+
 }
 

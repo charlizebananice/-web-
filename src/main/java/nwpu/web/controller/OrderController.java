@@ -14,7 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
+/**
+ * 配送员历史订单Controller
+ *
+ */
 @Controller
 @RequestMapping("/manager/order")
 public class OrderController {
