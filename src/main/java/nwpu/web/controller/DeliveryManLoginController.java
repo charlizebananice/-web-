@@ -69,7 +69,7 @@ public class DeliveryManLoginController {
                     System.out.println("5");
                     session.setAttribute("deliveryMan", deliveryMan);
                     // 登录成功, 别用重定向, 重定向是又向服务器重新发送请求, session会失效
-                    return "forward:/WEB-INF/views/deliveryManSelf.jsp"; // return的字符串是jsp的名, 不是请求的url
+                    return "deliveryman"; // return的字符串是jsp的名, 不是请求的url
                 }
 
             }

@@ -18,7 +18,7 @@ public class DeliveryManInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse
             response, Object handler) throws Exception {
         HttpSession session = request.getSession();
-        DeliveryMan deliveryMan = (DeliveryMan)session.getAttribute("deliveryman");
+        DeliveryMan deliveryMan = (DeliveryMan)session.getAttribute("deliveryMan");
         if (deliveryMan!=null){
             return true;
         }else {

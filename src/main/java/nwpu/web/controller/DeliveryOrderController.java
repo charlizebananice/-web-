@@ -26,7 +26,7 @@ import java.util.List;
  *
  */
 @Controller
-@RequestMapping("/deliveryorder")
+@RequestMapping("/deliveryman/deliveryorder")
 public class DeliveryOrderController {
 
     @Autowired
@@ -47,6 +47,7 @@ public class DeliveryOrderController {
         order.setOrderId(id);
         DeliveryMan deliveryMan = (DeliveryMan) session.getAttribute("deliveryMan");
         order.setDeliverymanId(deliveryMan.getDeliveryManId());
+
         System.out.println("deliverymanid" + deliveryMan.getDeliveryManId());
         System.out.println("进入controller" + order);
         Integer state = deliveryManService.nowState(deliveryMan);
@@ -64,7 +65,7 @@ public class DeliveryOrderController {
 
 
     @GetMapping
-    public void getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
+    public String getAll(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ServletException, IOException {
         System.out.println("进入");
         DeliveryMan d = (DeliveryMan) session.getAttribute("deliveryMan");
         List<DeliveryMan> deliveryMan = deliveryManService.getDeliveryManById(d.getDeliveryManId());
@@ -74,7 +75,7 @@ public class DeliveryOrderController {
 
         List<Order> data = deliveryOrderService.getAllOrder();
         request.setAttribute("data", data);
-        request.getRequestDispatcher("/WEB-INF/views/deliveryOrder.jsp").forward(request, response);
+        return "deliveryOrder";
     }
 
     @GetMapping("/id")

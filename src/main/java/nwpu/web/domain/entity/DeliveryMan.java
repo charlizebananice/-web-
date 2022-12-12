@@ -7,7 +7,6 @@ public class DeliveryMan {
     private int deleteState;
     private String phoneNo;
     private String email;
-
     private Integer state;
 
 

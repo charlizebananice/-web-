@@ -17,7 +17,7 @@ import java.util.List;
  *
  */
 @Controller
-@RequestMapping("/manager/deliveryman")
+@RequestMapping("/deliveryman")
 public class DeliveryManController {
     @Autowired
     private DeliveryManService deliveryManService;
@@ -41,12 +41,12 @@ public class DeliveryManController {
     }
 
     @GetMapping
-    public void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("进入");
         List<DeliveryMan> data = deliveryManService.getAllDeliveryMan();
         request.setAttribute("data",data);
-        request.getRequestDispatcher("/WEB-INF/views/deliveryment.jsp").forward(request,response);
         System.out.println("data为"+data);
+        return "deliveryman";
     }
 
     @GetMapping("/id")

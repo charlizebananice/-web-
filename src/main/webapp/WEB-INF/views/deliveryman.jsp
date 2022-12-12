@@ -36,42 +36,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/order">Order <span
+                        <a class="nav-link" href="${pageContext.request.contextPath}/deliveryman">待接单<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/manager/deliveryman/">配送员 <span
+                        <a class="nav-link" href="${pageContext.request.contextPath}/deliveryman/deliverymanself/">我的配送 <span
                                 class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                           data-toggle="dropdown" aria-expanded="false">
-                            管理员管理
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-toggle="modal"
-                               data-target="#searchManager">搜索管理员</a>
-                            <a class="dropdown-item" href="#" data-toggle="modal"
-                               data-target="#exampleModal">添加管理员</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item"
-                               href="${pageContext.request.contextPath}/manager">显示全部的管理员</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link">当前状态：${deliveryMan.state}
+                            <span class="sr-only">(current)</span></a>
                     </li>
-                    <%--<li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">配送员管理</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>--%>
                 </ul>
                 <div class="form-inline my-2 my-lg-0">
-                    <a type="button" data-toggle="modal" data-target="#see_self-info${deliveryMan.deliveryManId}">欢迎您，<%--${}--%></a>
+                        <a type="button" data-toggle="modal" data-target="#see_self-info${deliveryMan.deliveryManId}">欢迎您,${deliveryMan.deliveryManId}-${deliveryMan.deliveryManName} ></a>
                     <img src="${pageContext.request.contextPath}/static/assets/login.png" width="30" height="30" type="button"
                          class="d-inline-block align-top" data-toggle="modal" data-target="#exampleModal${deliveryMan.deliveryManId}">
                 </div>
@@ -101,16 +79,15 @@
                                         <input required="required" type="email" class="form-control" name="email" placeholder="输入邮箱">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                                     </div>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
-            <%--修改个人信息--%>
+                <%--修改个人信息--%>
                 <div class="modal fade" id="exampleModal${deliveryMan.deliveryManId}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -151,7 +128,7 @@
                 </div>
             </div>
         </nav>
-        <!-- Button trigger modal -->
+        <%--<!-- Button trigger modal -->
         <a class="btn btn-primary"
            href="http://localhost:8080/Intra_cityDistributionManagementSystem_war/deliveryManself"
            role="button">个人信息及修改</a>
@@ -237,7 +214,8 @@
                     </div>
                 </div>
             </div>
-        </c:forEach>
+        </c:forEach>--%>
+
         <%--页脚--%>
         <ul class="nav fixed-bottom">
             <li class="nav-item">
